@@ -16,6 +16,16 @@ export class AppComponent implements OnInit {
       title: 'CSS Properties',
       url: '/home',
       icon: 'home'
+    },
+    {
+      title: 'CSS Selectors',
+      url: '/selectors',
+      icon: 'book'
+    },
+    {
+      title: 'Colors',
+      url: '/colors',
+      icon: 'color'
     }
   ];
 

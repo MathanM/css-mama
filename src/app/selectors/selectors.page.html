@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>CSS MAMA</ion-title>
+    <ion-title>CSS SELECTORS</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list *ngFor="let group of cssGroup">
+  <ion-list *ngFor="let group of selectorGroup">
     <ion-item *ngFor="let i of group.value">
-      <ion-label>{{ cssData[i].prop }}</ion-label>
+      <ion-label>{{ selectorData[i].prop }}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

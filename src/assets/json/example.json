@@ -1,0 +1,1170 @@
+{
+	"1":{
+		"id":1,
+		"examples":[
+			{
+			"example":".body{ background:url(flower.png) fixed #00ff00;}",
+			"desc":"You can use any combination of these properties that you like, in almost any order, anything you don't specify in the background property is automatically set to its default."
+			},
+			{
+			"example":".body{ background:url(sweettexture.jpg), url(texture2.jpg) black; background-repeat:repeat-x, no-repeat;}",
+			"desc":"CSS3 added support for multiple backgrounds, which layer over the top of each other. Any property related to backgrounds can take a comma separated list."
+			}
+		],
+		"pg":[1]
+	},
+	"2":{
+		"id":2,
+		"examples":[
+			{
+			"example":".body{ background-image:url(natureFlower.png);}",
+			"desc":"The url() value allows you to provide a file path to any image"
+			},
+			{
+			"example":".body{ background-image:url(data:image/gifbase64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);}",
+			"desc":"You can also set a data URI for the url()"
+			}
+		],
+		"pg":[2,4,5]
+	},
+	"3":{
+		"id":3,
+		"examples":[
+			{
+			"example":".body{ background-position:top center;}",
+			"desc":"By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally."
+			},
+			{
+			"example":".body{ background-position:100px;}",
+			"desc":"If you only specify one value, the other value will be 50%."
+			}
+		],
+		"pg":[2,3,5,6]
+	},
+	"4":{
+		"id":4,
+		"examples":[
+			{
+			"example":".body{ background-size: 300px 100px;}",
+			"desc":"The first value sets the width, the second value sets the height. If only one value is given, the second is set to auto"
+			},
+			{
+			"example":".body{ background: url(greatimage.jpg), url(wonderfulimage.jpg); background-size: 50px 100px, cover;}",
+			"desc":"Apply background sizes to multiple images, simply by adding commas between each syntax"
+			}
+		],
+		"pg":[2,4,5]
+	},
+	"5":{
+		"id":5,
+		"examples":[
+			{
+			"example":".body{ background-repeat: repeat-x;}"
+			},
+			{
+			"example":".body{ background-repeat: no-repeat, round;}",
+			"desc":"You can also comma-separate multiple values if you're dealing with multiple backgrounds."
+			}
+		],
+		"pg":[2,4,5]
+	},
+	"6":{
+		"id":6,
+		"examples":[
+			{
+			"example":".body{ background-attachment: scroll;}"
+			},
+			{
+			"example":".body{ background-image: url(img_tree.gif); min-height: 500px; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;}",
+			"desc":"Creating a simple parallax scrolling effect (create an illusion of 3D depth):"
+			}
+		],
+		"pg":[2,5,6]
+	},
+	"7":{
+		"id":7,
+		"examples":[
+			{
+			"example":".body{ background-origin: content-box;}",
+			"desc":"background image start from the upper left corner of the content"
+			}
+		],
+		"pg":[2,4,5,7,11,29]
+	},
+	"8":{
+		"id":8,
+		"examples":[
+			{
+			"example":".body{ background-clip: content-box;}"
+			},
+			{
+			"example":".body{ border: 10px dotted black; padding: 15px; background: url(img_tree.gif); background-clip: content-box;}",
+			"desc":"background-clip also controls the background image, which would otherwise repeat until clipping."
+			}
+		],
+		"pg":[1,8,5,11,29]
+	},
+	"9":{
+		"id":9,
+		"examples":[
+			{
+			"example":".body{ background: blanchedAlmond;}"
+			},
+			{
+			"example":".body{ background: rgba(0, 0, 0, 0.8); background: hsla(170, 50%, 45%, 1);}",
+			"desc":"Another way to declare a color is to use RGB, RGBa, HSL, or HSLa, Unlike hex codes, these values allow for transparency (alpha)"
+			}
+		],
+		"pg":[9]
+	},
+	"10":{
+		"id":10,
+		"examples":[
+			{
+			"example":".body{ background-repeat: no-repeat, repeat; background-image: url(img_tree.gif), url(paper.gif); background-blend-mode: saturation;}"
+			}
+		],
+		"pg":[2,5,10]
+	},
+	"11":{
+		"id":11,
+		"examples":[{"example":".body{ border: 2px solid rose; border: dotted;}","desc":"border-style is required and not optional."},{"example":".body{ border: medium none text_color;}","desc":"Default value will be medium(3px) none and color of the text"}],
+		"pg":[11]
+	},
+	"12":{
+		"id":12,
+		"examples":[{"example":".body{ border-width: thin; border-style: solid;}"},{"example":".body{ border-width: 10px 5px 8px 4px; border-style: dotted;}","desc":"border widths are specified in top, right, bottom and left respectively."}],
+		"pg":[12,13,14]
+	},
+	"13":{
+		"id":13,
+		"examples":[{"example":".body{ border-style: dotted solid double dashed;}","desc":"top border is dotted, right border is solid, bottom border is double, left border is dashed"},{"example":".body{ border-style: dotted solid;}","desc":"top and bottom borders are dotted, right and left borders are solid"}],
+		"pg":[12,13,14]
+	},
+	"14":{
+		"id":14,
+		"examples":[{"example":".body{ border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);}","desc":"Specifies the border color of top, right bottom and left border respectively"}],
+		"pg":[12,13,14]
+	},
+	"15":{
+		"id":15,
+		"examples":[{"example":".body{ border: 2px solid red; border-radius: 25px;}"},{"example":".body{ border: 2px dotted yellow; border-radius: 5px 10px;}","desc":"first value applies to top-left and bottom-right corners, and the second value applies to top-right and bottom-left corners"}],
+		"pg":[11,15]
+	},
+	"16":{
+		"id":16,
+		"examples":[{"example":".body{ border-collapse: separate;}","desc":"The border-collapse property is for use on <table> elements (or elements made to behave like a table through display: table or display: inline-table)"}],
+		"pg":[11,16,17]
+	},
+	"17":{
+		"id":17,
+		"examples":[{"example":".body{ border-spacing: 15px 50px;}","desc":"If two values are specified, the first sets the horizontal spacing and the second sets the vertical spacing"}],
+		"pg":[11,16,17]
+	},
+	"18":{
+		"id":18,
+		"examples":[{"example":".body{ border: 10px solid transparent; border-image: url(border.png) 30% round;}","desc":"The border-image property cannot be applied to internal table elements (e.g. tr, th, td) when border-collapse is set to collapse."},{"example":".body{ border-image: repeating-linear-gradient( 45deg, purple, purple 1%, pink 1%, pink 8%) 10;}","desc":"This property also supports CSS Gradient to make your borders."}],
+		"pg":[12,13,18]
+	},
+	"19":{
+		"id":19,
+		"examples":[{"example":".body{ border-image-source: url(border.svg);}","desc":"you can also specify SVG and CSS Gradients for borders"}],
+		"pg":[12,13,19,20,21,23]
+	},
+	"20":{
+		"id":20,
+		"examples":[{"example":".body{ border-image-slice: 10%;}","desc":"A percentage value is relative to the size of the image."},{"example":".body{ border-image-slice: fill;}","desc":"By default, the center of the source image is discarded. But, when the fill keyword is used, it's applied to the background of the bordered element instead"}],
+		"pg":[13,19,20,21,23]
+	},
+	"21":{
+		"id":21,
+		"examples":[{"example":".body{ border-image-width: 7;}","desc":"The initial value is 1, so if this value is not set but there's a border or border-width declaration for the element, the border image will be drawn at that width."}],
+		"pg":[12,13,19,20,21]
+	},
+	"22":{
+		"id":22,
+		"examples":[{"example":".body{ border-image-outset: 1 2 3 4;}","desc":"The property accepts up to four positive length values or unitless numbers.The unitless number is multiplied with the border width to compute the outset value."}],
+		"pg":[13,19,20,21,22]
+	},
+	"23":{
+		"id":23,
+		"examples":[{"example":".body{ border-image-repeat: round repeat;}","desc":"This property can take upto two values,the first is applied to the horizontal sides and the second is applied to the vertical sides."}],
+		"pg":[12,13,19,20,21,23]
+	},
+	"24":{
+		"id":24,
+		"examples":[{"example":"h1{ margin: 30px 0;} p{ margin: 20px 0 0;}","desc":"<b>Margin Collapse: </b>Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.This does not happen on horizontal (left and right) margins! Only vertical (top and bottom) margins!"}],
+		"pg":[24]
+	},
+	"25":{
+		"id":25,
+		"pg":[25]
+	},
+	"26":{
+		"id":26,
+		"pg":[26]
+	},
+	"27":{
+		"id":27,
+		"pg":[27]
+	},
+	"28":{
+		"id":28,
+		"pg":[28]
+	},
+	"29":{
+		"examples":[{"example":".body{ padding:10px 5px 15px;}"}],
+		"pg":[29]
+	},
+	"30":{
+		"id":30,
+		"pg":[30,31,32,33]
+	},
+	"31":{
+		"id":31,
+		"pg":[30,31,32,33]
+	},
+	"32":{
+		"id":32,
+		"pg":[30,31,32,33]
+	},
+	"33":{
+		"id":33,
+		"pg":[30,31,32,33]
+	},
+	"34":{
+		"id":34,
+		"examples":[{"example":".body{ box-sizing: border-box; padding: 20px; margin-left:5px; width: 100px;}","desc":"padding beyond the specified width/height of the element, increases the width/height of the element."}],
+		"pg":[34,30,31,26,25]
+	},
+	"35":{
+		"id":35,
+		"examples":[{"example":".body{ box-shadow: 5px 10px 20px red inset,15px 15px green;}","desc":"You can comma separate box-shadow any many times as you like, with different positions and different colors on the same element"}],
+		"pg":[35]
+	},
+	"36":{
+		"id":36,
+		"examples":[{"example":".body{ background: linear-gradient(to bottom right, yellow, green); padding: 0em 1em; border-radius: 16px; border-style: solid; box-decoration-break: clone;}","html":"<span>Hello!<br>I love<br>CSS</span>","desc":"Here span is fragmented into 3 fragments"}],
+		"pg":[36]
+	},
+	"37":{
+		"id":37,
+		"examples":[{"example":".body{ width: 50%;}"},{"example":".body{ width: 100px;}"}],
+		"pg":[37]
+	},
+	"38":{
+		"id":38,
+		"examples":[{"example":".body{ height: 100px;}"},{"example":".body{ height: auto;}"}],
+		"pg":[38]
+	},
+	"39":{
+		"id":39,
+		"examples":[{"example":".body{ min-width: 50%;}"},{"example":".body{ min-width: 80px;}"}],
+		"pg":[37,39]
+	},
+	"40":{
+		"id":40,
+		"examples":[{"example":".body{ max-width: 20%;}"},{"example":".body{ max-width: 320px;}"}],
+		"pg":[37,40]
+	},
+	"41":{
+		"id":41,
+		"examples":[{"example":".body{ min-height: 50%;}"},{"example":".body{ min-height: 80px;}"}],
+		"pg":[38,41]
+	},
+	"42":{
+		"id":42,
+		"examples":[{"example":".body{ max-height: 20%;}"},{"example":".body{ max-height: 320px;}"}],
+		"pg":[38,42]
+	},
+	"43":{
+		"id":43,
+		"examples":[{"example":".body{ outline: 2px solid rose; outline: dotted;}"},{"example":".body{ outline: medium none invert;}","desc":"Default value will be medium(3px) none and inversion of background color"}],
+		"pg":[43]
+	},
+	"44":{
+		"id":44,
+		"examples":[{"example":".body{ outline-width: thin; outline-style: solid;}"},{"example":".body{ outline-width: 4px; outline-style: dotted;}"}],
+		"pg":[44,45,46]
+	},
+	"45":{
+		"id":45,
+		"examples":[{"example":".body{ outline-style: dashed;}"},{"example":".body{ outline-style: solid;}"}],
+		"pg":[44,45,46]
+	},
+	"46":{
+		"id":46,
+		"examples":[{"example":".body{ outline-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);}"}],
+		"pg":[44,45,46]
+	},
+	"47":{
+		"id":47,
+		"examples":[{"example":".body{ outline: 2px solid rose; outline-offset: 5px;}"}],
+		"pg":[44,45,46,47]
+	},
+	"48":{
+		"id":48,
+		"examples":[{"example":".body{ mix-blend-mode: screen;}"}],
+		"pg":[11,9,48]
+	},
+	"49":{
+		"id":49,
+		"pgChild":[{"className":"td","pg":[{"id":"49"}]}],
+		"examples":[{"example":"img{ vertical-align: text-top;}"}]
+	},
+	"50":{
+		"id":50,
+		"pg":[50],
+		"examples":[{"example":".body{ list-style: upper-latin inside;}","desc":"list-style-image is optional and list-style property is only applied to ul elements or with elements whose item display set to list-item"}]
+	},
+	"51":{
+		"id":51,
+		"pg":[51,52],
+		"examples":[{"example":".body{ list-style-type: decimal-leading-zero;}"},{"example":".body{ list-style-type: lower-roman;}"}]
+	},
+	"52":{
+		"id":52,
+		"pg":[51,52],
+		"examples":[{"example":".body{ list-style-position: outside;}","desc":"This list-style-position makes the marker to appear outside the border of the list."}]
+	},
+	"53":{
+		"id":53,
+		"pg":[51,52,53],
+		"examples":[{"example":".body{ list-style-image: url(marker.png);}"}]
+	},
+	"54":{
+		"id":54,
+		"pg":[54],
+		"examples":[{"example":".body{ letter-spacing: -20px;}","desc":"Negative values makes the letters to go in reverse order. (<b>Paragraph</b> to <b>hpargaraP</b>)"}]
+	},
+	"55":{
+		"id":55,
+		"pg":[55],
+		"examples":[{"example":".body{ line-height: 1.55;}","desc":"This is also a valid input."}]
+	},
+	"56":{
+		"id":56,
+		"pg":[56,38],
+		"comment":"Adjust the height based on the lines to clamp",
+		"required":[{"prop":"display","value":"-webkit-box"},{"prop":"-webkit-box-orient","value":"vertical"},{"prop":"overflow","value":"hidden"}],
+		"examples":[{"example":".body{ line-clamp: 2;}","desc":"As it's currently defined, though, line-clamp only accepts a single numeric value for <b>max-lines</b> and implicitly sets <b>block-overflow</b> to the ellipsis value"}]
+	},
+	"57":{
+		"id":57,
+		"pg":[57],
+		"examples":[{"example":".body{ tab-size: 4;}"},{"example":".body{ tab-size: 8px;}"}]
+	},
+	"58":{
+		"id":58,
+		"pg":[58],
+		"required":[{"prop":"white-space","value":"nowrap"},{"prop":"overflow","value":"hidden"}],
+		"examples":[{"example":".body{ text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}","desc":"Both of the following properties are required for text-overflow,  <b>white-space: nowrap; overflow: hidden;</b>"}]
+	},
+	"59":{
+		"id":59,
+		"pg":[59],
+		"examples":[{"example":".body{ text-align: justify;}","desc":"The <b>text-justify</b> property gives additional control over the justified paragraph"}]
+	},
+	"60":{
+		"id":60,
+		"pg":[59,60],
+		"examples":[{"example":".body{ text-align-last: justify;}","desc":"The <b>text-justify</b> property gives additional control over the justified paragraph"}]
+	},
+	"61":{
+		"id":61,
+		"pg":[61],
+		"required":[{"prop":"text-align","value":"justify"}],
+		"examples":[{"example":".body{ text-align: justify; text-justify: inter-character;}","desc":"The <b>text-align:justify</b> is needed for this property to take effect"}]
+	},
+	"62":{
+		"id":62,
+		"pg":[59,62],
+		"examples":[{"example":".body{ text-indent: -5px;}","desc":"Negative values are allowed. The first line will be indented to the left if the value is negative."}]
+	},
+	"63":{
+		"id":63,
+		"pg":[63,59],
+		"examples":[{"example":".body{ word-spacing: 10px;}","desc":"word-spacing affects inline-block elements as well as inline elements."}]
+	},
+	"64":{
+		"id":64,
+		"pg":[64,59,63],
+		"examples":[{"example":".body{ writing-mode: vertical-rl;}","desc":"writing-mode affects inline-block and inline elements. Hence <b>Masonary or Bricklaying</b> effect can be achieved."}]
+	},
+	"65":{
+		"id":65,
+		"pg":[65],
+		"examples":[{"example":".body{ direction: rtl;}"}]
+	},
+	"66":{
+		"id":66,
+		"pg":[66,67,38],
+		"comment":"Adjust the height based on the lines to clamp",
+		"required":[{"prop":"display","value":"-webkit-box"},{"prop":"-webkit-box-orient","value":"vertical"},{"prop":"overflow","value":"hidden"}],
+		"examples":[{"example":".body{ block-overflow: ellipsis; max-lines: 2;}","desc":"max-lines property required by block-overflow"}]
+	},
+	"67":{
+		"id":67,
+		"pg":[66,67,38],
+		"comment":"Adjust the height based on the lines to clamp",
+		"required":[{"prop":"display","value":"-webkit-box"},{"prop":"-webkit-box-orient","value":"vertical"},{"prop":"overflow","value":"hidden"}],
+		"examples":[{"example":".body{ block-overflow: clip; max-lines: 4;}"}]
+	},
+	"68":{
+		"id":68,
+		"pg":[68],
+		"required":[{"prop":"direction","value":"rtl"}],
+		"examples":[{"example":".body{ direction: rtl; unicode-bidi: bidi-override;}"}]
+	},
+	"69":{
+		"id":69,
+		"pg":[69],
+		"examples":[{"example":".body{ text-transform: uppercase;}"}]
+	},
+	"70":{
+		"id":70,
+		"pg":[70],
+		"examples":[{"example":".body{ text-decoration: line-through underline;}","desc":"You can combine the underline, overline, or line-through values in a space-separated list to add multiple decoration lines."}]
+	},
+	"71":{
+		"id":71,
+		"pg":[71,72,73],
+		"examples":[{"example":".body{ text-decoration-color: green;","desc":"This property requires text-decoration-line property to take effect."},{"example":".body{ text-decoration: underline overline; text-decoration-color: #00dd00;}","desc":"Multiple decoration lines cannot have different colors."}]
+	},
+	"72":{
+		"id":72,
+		"pg":[71,72,73],
+		"examples":[{"example":".body{ text-decoration-line: overline line-through;}","desc":"You can combine multiple values in a space-separated list to add multiple decoration lines"}]
+	},
+	"73":{
+		"id":73,
+		"pg":[71,72,73],
+		"examples":[{"example":".body{ text-decoration-style: dotted;}","desc":"Multiple decoration lines cannot have different decoration styles."}]
+	},
+	"74":{
+		"id":74,
+		"pg":[71,72,73,74],
+		"examples":[{"example":".body{ text-decoration-skip-ink: none;}"}]
+	},
+	"75":{
+		"id":75,
+		"pg":[71,72,73,75],
+		"examples":[{"example":".body{ text-underline-position: under;}"}]
+	},
+	"76":{
+		"id":76,
+		"pg":[76],
+		"examples":[{"example":".body{ text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;}","desc":"This property accepts a comma-separated list of shadows to be applied to the text."}]
+	},
+	"77":{
+		"id":77,
+		"pg":[77],
+		"examples":[{"example":".body{ text-stroke: 3px #FF0000;}"}]
+	},
+	"78":{
+		"id":78,
+		"pg":[78,79],
+		"examples":[{"example":".body{ text-stroke-width: 2em;}"}]
+	},
+	"79":{
+		"id":79,
+		"pg":[78,79],
+		"examples":[{"example":".body{ text-stroke-color: rgb(201, 76, 76);}"}]
+	},
+	"80":{
+		"id":80,
+		"pg":[80,81],
+		"examples":[{"example":".body{ text-fill-color: #FF0000;}"}]
+	},
+	"81":{
+		"id":81,
+		"pg":[81],
+		"examples":[{"example":".body{ color: violet;}"}]
+	},
+	"82":{
+		"id":82,
+		"pg":[82],
+		"examples":[{"example":".body{ font: normal small-caps normal 16px/1.4 Georgia;}","desc":"The font-size and font-family values are required. If one of the other values is missing, their default value are used."}]
+	},
+	"83":{
+		"id":83,
+		"pg":[83,84,85,86,87],
+		"examples":[{"example":".body{ font-style: italic;}","desc":"Italic forms are generally cursive in nature while oblique faces are typically sloped versions of the regular face"}]
+	},
+	"84":{
+		"id":84,
+		"pg":[84,69],
+		"examples":[{"example":".body{ font-variant: small-caps;}","desc":"If font-variant: small-caps and text-transform: uppercase, then text will appear in all regular uppercase."}]
+	},
+	"85":{
+		"id":85,
+		"pg":[85,86,86,84,83],
+		"examples":[{"example":".body{ font-weight: bold;}"},{"example":".body{ font-weight: 500;}"}]
+	},
+	"86":{
+		"id":86,
+		"pg":[86,87,85,84,83],
+		"examples":[{"example":".body{ font-size: 2em;}","desc":"The em unit is a relative unit based on the computed value of the font size of the parent element. This means that child elements are always dependent on their parent to set their font-size"}]
+	},
+	"87":{
+		"id":87,
+		"pg":[87,86,85,84,83],
+		"examples":[{"example":".body{ font-family: \"Times New Roman\", Georgia, serif;}","desc":"If a family name contains multiple words, separated by spaces, it is recommended to list the family name in quotation marks (single or double)"},{"example":".body{ font-family: Arial, Helvetica, sans-serif;}","desc":"A series of family names, separated by commas"}]
+	},
+	"88":{
+		"id":88,
+		"pg":[88],
+		"examples":[{"example":".body{ font-stretch: ultra-condensed;}"}]
+	},
+	"89":{
+		"id":89,
+		"pg":[89],
+		"examples":[{"example":".body{ font-feature-settings: 'liga1' on;}"},{"example":".body{ font-feature-settings: 'smcp' 1, 'onum' 1;}","desc":"To add multiple features you need to follow one value by another in a comma separated list"}]
+	},
+	"90":{
+		"id":90,
+		"pg":[90,86],
+		"examples":[{"example":".body{ font-size-adjust: 0.58;}"}]
+	},
+	"91":{
+		"id":91,
+		"pg":[91],
+		"pgChild":[{"className":"child","pg":[{"id":91},{"id":92,"value":"0px"},{"id":93}]}],
+		"requiredChild":[{"prop":"min-width","value":"50px"},{"prop":"min-height","value":"50px"}],
+		"commentChild":"",
+		"examples":[{"example":".body{ position: absolute;}"}]
+	},
+	"92":{
+		"id":92,
+		"pg":[91],
+		"pgChild":[{"className":"child","pg":[{"id":91},{"id":92}]}],
+		"examples":[{"example":".body{ top: 100px;}"}]
+	},
+	"93":{
+		"id":93,
+		"pg":[91],
+		"pgChild":[{"className":"child","pg":[{"id":91},{"id":93}]}],
+		"examples":[{"example":".body{ left: 50%;}"}]
+	},
+	"94":{
+		"id":94,
+		"pg":[91],
+		"pgChild":[{"className":"child","pg":[{"id":91},{"id":94}]}],
+		"examples":[{"example":".body{ bottom: -160px;}"}]
+	},
+	"95":{
+		"id":95,
+		"pg":[91],
+		"pgChild":[{"className":"child","pg":[{"id":91},{"id":95}]}],
+		"examples":[{"example":".body{ right: 50px;}"}]
+	},
+	"96":{
+		"id":96,
+		"pg":[96],
+		"examples":[{"example":".body{ animation: nudge 5s linear infinite alternate;}","desc":"Each animation needs to be defined with the @keyframes at-rule which is then called with the animation property"},{"example":".body{ animation: pulse 3s ease infinite alternate, nudge 5s linear infinite alternate;}","desc":"You can comma-separate the values to declare multiple animations on a selector "}]
+	},
+	"97":{
+		"id":97,
+		"pg":[97,98],
+		"required":[{"prop":"animation-iteration-count","value":"infinite"}],
+		"examples":[{"example":".body{ animation-name: shapeAnimation;}"},{"example":".body{ animation-name: stretch;}"}]
+	},
+	"98":{
+		"id":98,
+		"pg":[97,98],
+		"required":[{"prop":"animation-iteration-count","value":"infinite"}],
+		"examples":[{"example":".body{ animation-duration: 0.3s;}","desc":"Setting this property to 0 will remove the animation effect."}]
+	},
+	"99":{
+		"id":99,
+		"pg":[97,98,99],
+		"required":[{"prop":"animation-iteration-count","value":"infinite"}],
+		"examples":[{"example":".body{ animation-timing-function: ease-out;}"}]
+	},
+	"100":{
+		"id":100,
+		"pg":[97,98,100],
+		"required":[{"prop":"animation-iteration-count","value":"infinite"}],
+		"comment":"Change the animation-name to none and then change it back to some keyframe rules to see this effect.",
+		"examples":[{"example":".body{ animation-delay: 0.5s;}"}]
+	},
+	"101":{
+		"id":101,
+		"pg":[97,98,101],
+		"examples":[{"example":".body{ animation-iteration-count: infinite;}"}]
+	},
+	"102":{
+		"id":102,
+		"pg":[97,98,102],
+		"required":[{"prop":"animation-iteration-count","value":"infinite"}],
+		"examples":[{"example":".body{ animation-direction: reverse;}"}]
+	},
+	"103":{
+		"id":103,
+		"pg":[97,98,103],
+		"examples":[{"example":".body{ animation-fill-mode: both;}"}]
+	},
+	"104":{
+		"id":104,
+		"pg":[97,98,99,104],
+		"required":[{"prop":"animation-iteration-count","value":"infinite"}],
+		"examples":[{"example":".body{ animation-play-state:paused;}"}]
+	},
+	"105":{
+		"id":105,
+		"pg":[105],
+		"examples":[{"example":".body{ transition: background-color 500ms ease-out 1s;}"}]
+	},
+	"106":{
+		"id":106,
+		"pg":[106,107],
+		"examples":[{"example":".body{ transition-property: padding;}"}]
+	},
+	"107":{
+		"id":107,
+		"pg":[107],
+		"examples":[{"example":".body{ transition-duration: 0.8s;}"}]
+	},
+	"108":{
+		"id":108,
+		"pg":[106,107,108],
+		"examples":[{"example":".body{ transition-timing-function: cubic-bezier(0,0,0.58,1);}"}]
+	},
+	"109":{
+		"id":109,
+		"pg":[106,107,108,109],
+		"examples":[{"example":".body{ transition-delay: 5s;}"}]
+	},
+	"110":{
+		"id":110,
+		"pg":[110],
+		"examples":[{"example":".body{ overflow: scroll;}"}]
+	},
+	"111":{
+		"id":111,
+		"pg":[111],
+		"required":[{"prop":"white-space","value":"nowrap"}],
+		"examples":[{"example":".body{ overflow-x: auto;}"}]
+	},
+	"112":{
+		"id":112,
+		"pg":[112],
+		"examples":[{"example":".body{ overflow-y: hidden;}"}]
+	},
+	"113":{
+		"id":113,
+		"pg":[113],
+		"required":[{"prop":"overflow","value":"scroll"}],
+		"examples":[{"example":".body{ overflow-anchor: auto;}"}]
+	},
+	"114":{
+		"id":114,
+		"pg":[114],
+		"required":[{"prop":"hypens","value":"auto"}],
+		"examples":[{"example":".body{ overflow-wrap: break-word;}","desc":"overflow-wrap and word-break behave very similarly. The word-break specifies soft wrap opportunities between letters."}]
+	},
+	"115":{
+		"id":115,
+		"pg":[115],
+		"examples":[{"example":".body{ scroll-behavior: smooth;}"}]
+	},
+	"116":{
+		"id":116,
+		"pg":[116],
+		"examples":[{"example":".body{ speak: spell-out;}"}]
+	},
+	"117":{
+		"id":117,
+		"pg":[117],
+		"examples":[{"example":".body{ pointer-events: none;}"}]
+	},
+	"118":{
+		"id":118,
+		"pg":[118],
+		"examples":[{"example":".body{ caret-color: #ggffdd;}"}]
+	},
+	"119":{
+		"id":119,
+		"pg":[119],
+		"examples":[{"example":".body{ cursor: url(ball.cur),auto;}"},{"example":".body{ cursor: url(images/my-cursor.png), auto;}"}]
+	},
+	"120":{
+		"id":120,
+		"pg":[120],
+		"examples":[{"example":".body{ filter: contrast(200%) brightness(150%);}","desc":"Multiple functions can be used, space separated"}]
+	},
+	"121":{
+		"id":121,
+		"pg":[121],
+		"examples":[{"example":".body{ fill: url(#pattern-checkers);}","html":"<defs>\n\t<pattern id='pattern-checkers' x='0' y='0' width='200' height='200' patternUnits='userSpaceOnUse' >\n\t\t<rect class='checker' x='0' width='100' height='100' y='0'/>\n\t\t<rect class='checker' x='100' width='100' height='100' y='100'/>\n\t</pattern>\n</defs>"}]
+	},
+	"122":{
+		"id":122,
+		"pg":[122],
+		"examples":[{"example":".body{ fill: url(#pattern);}","html":"<defs>\n\t<pattern id='pattern' patternUnits='userSpaceOnUse' width='10' height='10'>\n\t\t<image xlink:href='data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScgLz4KICA8cmVjdCB4PScwJyB5PScwJyB3aWR0aD0nOScgaGVpZ2h0PSc5JyBmaWxsPSdibGFjaycgLz4KPC9zdmc+' x='0' y='0' width='10' height='10'></image>\n\t</pattern>\n</defs>"}]
+	},
+	"123":{
+		"id":123,
+		"pg":[122,123],
+		"examples":[{"example":".body{ stroke-width: 2.5;}"}]
+	},
+	"124":{
+		"id":124,
+		"pg":[122,123,124],
+		"examples":[{"example":".body{ stroke-linecap: round;}"}]
+	},
+	"125":{
+		"id":125,
+		"pg":[122,123,124,125],
+		"examples":[{"example":".body{ stroke-dasharray: 1000;}"}]
+	},
+	"126":{
+		"id":126,
+		"pg":[122,123,124,125,126],
+		"examples":[{"example":".body{ stroke-dashoffset: 100em;}"}]
+	},
+	"127":{
+		"id":127,
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"128"},{"id":"129"},{"id":"130"}]},
+			{"className":"item2","pg":[{"id":"128","value":"0"},{"id":"130"}]},
+			{"className":"item3","pg":[{"id":"128","value":"1"},{"id":"130"}]},
+			{"className":"item4","pg":[{"id":"128","value":"0"},{"id":"130"}]}],
+		"examples":[{"example":".body{ flex: 1 3 200px;}"}]
+	},
+	"128":{
+		"id":128,
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"128"},{"id":"129"},{"id":"130"}]},
+			{"className":"item2","pg":[{"id":"128","value":"0"},{"id":"130"}]},
+			{"className":"item3","pg":[{"id":"128","value":"0"},{"id":"130"}]},
+			{"className":"item4","pg":[{"id":"128","value":"0"},{"id":"130"}]}],
+		"examples":[{"example":".body{ flex-grow: 2;}"}]
+	},
+	"129":{
+		"id":129,
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"128","value":"1"},{"id":"129","value":"4"},{"id":"130","value":"150px"}]},
+			{"className":"item2","pg":[{"id":"128","value":"1"},{"id":"129","value":"1"},{"id":"130","value":"150px"}]},
+			{"className":"item3","pg":[{"id":"128","value":"1"},{"id":"129","value":"1"},{"id":"130","value":"150px"}]},
+			{"className":"item4","pg":[{"id":"128","value":"1"},{"id":"129","value":"1"},{"id":"130","value":"150px"}]}],
+		"examples":[{"example":".body{ flex-shrink: 1;}"}]
+	},
+	"130":{
+		"id":130,
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"128"},{"id":"129"},{"id":"130"}]},
+			{"className":"item2","pg":[{"id":"128","value":"0"},{"id":"130"}]},
+			{"className":"item3","pg":[{"id":"128","value":"1"},{"id":"130"}]}],
+		"examples":[{"example":".body{ flex-basis: 100px;}"}]
+	},
+	"131":{
+		"id":131,
+		"pg":[131],
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"130"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"}]},{"className":"item4","pg":[{"id":"130"}]},
+			{"className":"item5","pg":[{"id":"130"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"examples":[{"example":".body{ flex-flow: column-reverse nowrap;}"}]
+
+	},
+	"132":{
+		"id":132,
+		"pg":[132,133],
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"130"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"}]},{"className":"item4","pg":[{"id":"130"}]},
+			{"className":"item5","pg":[{"id":"130"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"examples":[{"example":".body{ flex-direction: row-reverse;}"}]
+	},
+	"133":{
+		"id":133,
+		"pg":[132,133],
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"130"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"}]},{"className":"item4","pg":[{"id":"130"}]},
+			{"className":"item5","pg":[{"id":"130"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"examples":[{"example":".body{ flex-wrap: wrap-reverse;}"}]
+	},
+	"134":{
+		"id":134,
+		"pg":[132,133,134],
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"130"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"}]},{"className":"item4","pg":[{"id":"130"}]},
+			{"className":"item5","pg":[{"id":"130"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"examples":[{"example":".body{ align-items: center;}"}]
+	},
+	"135":{
+		"id":135,
+		"pg":[132,133,134],
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"130"},{"id":"135"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"},{"id":"135"}]},{"className":"item4","pg":[{"id":"130"}]},
+			{"className":"item5","pg":[{"id":"130"},{"id":"135"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"},{"id":"135"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"},{"id":"135"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"examples":[{"example":".body{ align-items: center;}"}]
+	},
+	"136":{
+		"id":136,
+		"pg":[132,133,134,136],
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"130"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"}]},{"className":"item4","pg":[{"id":"130"}]},
+			{"className":"item5","pg":[{"id":"130"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"examples":[{"example":".body{ align-content: center;}"}]
+	},
+	"137":{
+		"id":137,
+		"pg":[132,133,134,136,137],
+		"required":[{"prop":"display","value":"flex"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"130"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"}]},{"className":"item4","pg":[{"id":"130"}]},
+			{"className":"item5","pg":[{"id":"130"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"examples":[{"example":".body{ justify-content: space-between;}"}]
+	},
+	"138":{
+		"id":138,
+		"pg":[2,5,10,138],
+		"examples":[{"example":".body{ isolation: isolate;}"}]
+	},
+	"139":{
+		"id":139,
+		"pg":[143,140,141],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"}],
+		"examples":[{"example":".body{ grid: 'myArea myArea . . .'\n\t\t\t\t\t'myArea myArea . . .'}"},{"example":".body{ grid: 150px / auto auto auto;}"}]
+	},
+	"140":{
+		"id":140,
+		"pg":[140,141],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"}],
+		"examples":[{"example":".body{ grid-template-rows: 20% 30% 40%;}"},{"example":".child { grid-template-rows: 120px 30px 500px;}"}]
+	},
+	"141":{
+		"id":141,
+		"pg":[140,141],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"}],
+		"examples":[{"example":".body{ grid-template-columns: 50% 50%;}"},{"example":".body{ grid-template-columns: 180px 50% 560px;}"}]
+	},
+	"142":{
+		"id":142,
+		"pg":[142],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"144","value":"item1Area"}]},{"className":"item2","pg":[{"id":"144","value":"item2Area"}]},{"className":"item3","pg":[{"id":"144"}]},{"className":"item4","pg":[{"id":"144","value":"item4Area"}]}],
+		"examples":[{"example":".body{ grid-template: \n\t\t\t\t'header header header'\n\t\t\t\t'menu main main'\n\t\t\t\t'footer footer footer';}"},{"example":".body{ grid-template: 150px / 200px auto auto;}"}]
+	},
+	"143":{
+		"id":143,
+		"pg":[143],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"144","value":"item1Area"}]},{"className":"item2","pg":[{"id":"144","value":"item2Area"}]},{"className":"item3","pg":[{"id":"144"}]},{"className":"item4","pg":[{"id":"144","value":"item4Area"}]}],
+		"examples":[{"example":".body{ grid-template-areas: \n\t\t\t\t'header header header'\n\t\t\t\t'menu main main'\n\t\t\t\t'footer footer footer';}"}]
+	},
+	"144":{
+		"id":144,
+		"pg":[143],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"144","value":"item1Area"}]},{"className":"item2","pg":[{"id":"144","value":"item2Area"}]},{"className":"item3","pg":[{"id":"144"}]},{"className":"item4","pg":[{"id":"144","value":"item4Area"}]}],
+		"examples":[{"example":".child { grid-area: header;}"},{"example":".child { grid-area: 1 / 3 / 2 / 4;}"}]
+	},
+	"145":{
+		"id":145,
+		"pg":[140,141],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"145"}]},{"className":"item2","pg":[{"id":"145"}]}],
+		"examples":[{"example":".child { grid-row-start: 3;}"}]
+	},
+	"146":{
+		"id":146,
+		"pg":[140,141],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"145"},{"id":"146"}]},{"className":"item2","pg":[{"id":"145"},{"id":"146"}]}],
+		"examples":[{"example":".child { grid-row-end: span 3;}"}]
+	},
+	"147":{
+		"id":147,
+		"pg":[140,141,147],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},{"className":"item5"},{"className":"item6"}],
+		"examples":[{"example":".body{ grid-row-gap: 5em;}"}]
+	},
+	"148":{
+		"id":148,
+		"pg":[140,141],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"148"}]},{"className":"item2","pg":[{"id":"148"}]}],
+		"examples":[{"example":".child { grid-row: 1 / 3;}"},{"example":".child { grid-row: 1 / span 5;}"}]
+	},
+	"149":{
+		"id":149,
+		"pg":[140,141],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"148"},{"id":"149"}]}],
+		"examples":[{"example":".child { grid-column: 1 / 3;}"},{"example":".child { grid-column: 1 / span 5;}"}]
+	},
+	"150":{
+		"id":150,
+		"pg":[140,141],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"150"}]},{"className":"item2","pg":[{"id":"150"}]}],
+		"examples":[{"example":".child { grid-column-start: 3;}"}]
+	},
+	"151":{
+		"id":151,
+		"pg":[140,141],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"150"},{"id":"151"}]},{"className":"item2","pg":[{"id":"150"},{"id":"151"}]}],
+		"examples":[{"example":".child { grid-column-end: span 3;}"}]
+	},
+	"152":{
+		"id":152,
+		"pg":[140,141,152],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},{"className":"item5"},{"className":"item6"}],
+		"examples":[{"example":".body{ grid-column-gap: 5em;}"}]
+	},
+	"153":{
+		"id":153,
+		"pg":[140,141,153],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},{"className":"item5"},{"className":"item6"}],
+		"examples":[{"example":".body{ grid-gap: 5em 30px;}"}]
+	},
+	"154":{
+		"id":154,
+		"pg":[140,141,154],
+		"required":[{"prop":"display","value":"grid"}],
+		"pgChild":[{"className":"item1"},{"className":"item2","pg":[{"id":"145","value":"3"},{"id":"150","value":"3"}]},{"className":"item3"},{"className":"item4"},{"className":"item5"},{"className":"item6"}],
+		"examples":[{"example":".body{ grid-auto-flow: column dense;}"}]
+	},
+	"155":{
+		"id":155,
+		"pg":[155,154],
+		"required":[{"prop":"display","value":"grid"},{"prop":"grid-template-rows","value":"auto auto auto 100px"},{"prop":"grid-template-columns","value":"auto 100px auto auto"}],
+		"pgChild":[{"className":"item1"},{"className":"item2","pg":[{"id":"145","value":"3"},{"id":"150","value":"3"}]},{"className":"item3"},{"className":"item4"},{"className":"item5"},{"className":"item6"}],
+		"examples":[{"example":".body{ grid-auto-columns: 320px;}"}]
+	},
+	"156":{
+		"id":156,
+		"pg":[156,154],
+		"required":[{"prop":"display","value":"grid"},{"prop":"grid-template-rows","value":"auto auto auto 100px"},{"prop":"grid-template-columns","value":"auto 100px auto auto"}],
+		"pgChild":[{"className":"item1"},{"className":"item2","pg":[{"id":"145","value":"3"},{"id":"150","value":"3"}]},{"className":"item3"},{"className":"item4"},{"className":"item5"},{"className":"item6"}],
+		"examples":[{"example":".body{ grid-auto-rows: 50%;}"}]
+	},
+	"157":{
+		"id":157,
+		"pg":[160,161],
+		"pgChild":[{"className":"transformChild","pg":[{"id":"157"},{"id":"158"},{"id":"159"}]}],
+		"examples":[{"example":".child{ transform: scale(20) skew(-20deg);}","desc":"With a space-separated list you can add multiple values to the transform property."}]
+	},
+	"158":{
+		"id":158,
+		"pg":[160,161],
+		"pgChild":[{"className":"transformChild","pg":[{"id":"157"},{"id":"158"},{"id":"159"}]}],
+		"examples":[{"example":".child{ transform-origin: 20% 40% 30px;}","desc":"3D transformations can also change the z-axis of an element."}]
+	},
+	"159":{
+		"id":159,
+		"pg":[160,161],
+		"pgChild":[{"className":"transformChild","pg":[{"id":"157"},{"id":"158"},{"id":"159"}]}],
+		"examples":[{"example":".child{ transform-style: flat;}"}]
+	},
+	"160":{
+		"id":160,
+		"pg":[160,161],
+		"pgChild":[{"className":"transformChild","pg":[{"id":"157"},{"id":"158"},{"id":"159"}]}],
+		"examples":[{"example":".body{ perspective: 500px;}"}]
+	},
+	"161":{
+		"id":161,
+		"pg":[160,161],
+		"pgChild":[{"className":"transformChild","pg":[{"id":"157"},{"id":"158"},{"id":"159"}]}],
+		"examples":[{"example":".body{ perspective-origin: center center;}"}]
+	},
+	"162":{
+		"id":162,
+		"pg":[91],
+		"pgChild":[{"className":"item1","pg":[{"id":"162"},{"id":"91"}]},{"className":"item2","pg":[{"id":"162"},{"id":"91"}]},{"className":"item3","pg":[{"id":"162"},{"id":"91"}]},{"className":"item4","pg":[{"id":"162"},{"id":"91"}]}],
+		"examples":[{"example":".child{ z-index: -1;}"}]
+	},
+	"163":{
+		"id":163,
+		"required":[{"prop":"transform","value":"rotateY(30deg)"}],
+		"pg":[163],
+		"examples":[{"example":".child{ backface-visibility: hidden;}"}]
+	},
+	"164":{
+		"id":164,
+		"pg":[164],
+		"examples":[{"example":".body{ user-select: all;}"}]
+	},
+	"165":{
+		"id":165,
+		"pgChild":[{"className":"item1","pg":[{"id":"165"}]},{"className":"item2","pg":[{"id":"165"}]},{"className":"item3","pg":[{"id":"165"}]},{"className":"item4","pg":[{"id":"165"}]},{"className":"item5","pg":[{"id":"165"}]},{"className":"item6","pg":[{"id":"165"}]},{"className":"item7","pg":[{"id":"165"}]},{"className":"item8","pg":[{"id":"165"}]}],
+		"examples":[{"example":".body{ visibility: visible;}"}]
+	},
+	"166":{
+		"id":166,
+		"required":[{"prop":"overflow","value":"auto"}],
+		"pg":[166],
+		"examples":[{"example":".body{ resize: horizontal;}"}]
+	},
+	"167":{
+		"id":167,
+		"pg":[167],
+		"examples":[{"example":".body{ hyphens: auto;}"}]
+	},
+	"168":{
+		"id":168,
+		"pg":[168],
+		"examples":[{"example":".body{ quotes: \"«\" \"»\" \"‹\" \"›\";}","html":"<q>This is a <q>quote</q> inside a quote.</q>"}]
+	},
+	"169":{
+		"id":169,
+		"pg":[169],
+		"examples":[{"example":".body{ zoom: 2;}","desc":"Negative values are not allowed"}]
+	},
+	"170":{
+		"id":170,
+		"required":[{"prop":"display","value":"block"}],
+		"pg":[170],
+		"pgChild":[{"className":"item1","pg":[{"id":"130"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"}]},{"className":"item4","pg":[{"id":"130"}]},
+			{"className":"item5","pg":[{"id":"130"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"examples":[{"example":".body{ column-count: 3;}"}]
+	},
+	"171":{
+		"id":171,
+		"required":[{"prop":"display","value":"block"}],
+		"pg":[170,171,172,176],
+		"pgChild":[{"className":"item1 col"},{"className":"col item2"},{"className":"col item3"},{"className":"col item4"},
+			{"className":"col item5"},{"className":"col item6"}],
+		"examples":[{"example":".body{ column-fill: balance;}"}]
+	},
+	"172":{
+		"id":172,
+		"required":[{"prop":"display","value":"block"}],
+		"pg":[170,172],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+		"examples":[{"example":".body{ column-gap: 40px;}"}]
+	},
+	"173":{
+		"id":173,
+		"required":[{"prop":"display","value":"block"}],
+		"pg":[170,172,176],
+		"pgChild":[{"className":"item1 col","pg":[{"id":"173"}]},{"className":"col item2","pg":[{"id":"173"}]},{"className":"col item3","pg":[{"id":"173"}]},{"className":"col item4","pg":[{"id":"173"}]},
+			{"className":"col item5","pg":[{"id":"173"}]},{"className":"col item6","pg":[{"id":"173"}]}],
+		"examples":[{"example":".body{ column-span: all;}"}]
+	},
+	"174":{
+		"id":174,
+		"required":[{"prop":"display","value":"block"}],
+		"pg":[170,172,174],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+		"examples":[{"example":".body{ column-width: 620px;}"}]
+	},
+	"175":{
+		"id":175,
+		"required":[{"prop":"display","value":"block"}],
+		"pg":[170,174],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+		"examples":[{"example":".body{ columns: 120px 4;}"}]
+	},
+	"176":{
+		"id":176,
+		"required":[{"prop":"display","value":"block"}],
+		"pg":[170,172,176],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+		"examples":[{"example":".body{ column-rule: 2px inset #ff0sff;}"}]
+	},
+	"177":{
+		"id":177,
+		"required":[{"prop":"display","value":"block"}],
+		"pg":[170,172,177,178,179],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+		"examples":[{"example":".body{ column-rule-color: #ff0000;}"}]
+	},
+	"178":{
+		"id":178,
+		"required":[{"prop":"display","value":"block"}],
+		"pg":[170,172,177,178,179],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+		"examples":[{"example":".body{ column-rule-style: groove;}"}]
+	},
+	"179":{
+		"id":179,
+		"required":[{"prop":"display","value":"block"}],
+		"pg":[170,172,177,178,179],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+		"examples":[{"example":".body{ column-rule-width: thick;}"}]
+	},
+	"180":{
+		"id":180,
+		"examples":[{"example":".body{ all: inherit;}"}],
+		"pgChild":[{"className":"item1","pg":[{"id":"180"}]}]
+	},
+	"181":{
+		"id":181,
+		"pg":[181],
+		"required":[{"prop":"position","value":"absolute"}],
+		"examples":[{"example":".body{ clip: rect(110px, 160px, 170px, 60px);}"}]
+	},
+	"182":{
+		"id":182,
+		"pg":[182],
+		"examples":[{"example":".body{ clip-path: inset(10px 20px 30px 40px);}","desc":"Doesn't require positioning"}]
+	},
+	"183":{
+		"id":183,
+		"pg":[184],
+		"pgChild":[{"className":"listItem","pg":[{"id":"183"},{"id":"190","value":"'*' counter(counter1)"}]},{"className":"listItem","pg":[{"id":"183"},{"id":"190","value":"'*' counter(counter1)"}]},{"className":"listItem","pg":[{"id":"183"},{"id":"190","value":"'*' counter(counter1)"}]},{"className":"listItem","pg":[{"id":"183"},{"id":"190","value":"'*' counter(counter1)"}]},
+			{"className":"listItem","pg":[{"id":"183"},{"id":"190","value":"'*' counter(counter1)"}]}],
+		"examples":[{"example":"li:before{ counter-increment: my-counter -2;}","desc":"Decrements the counter value by 2"}]
+	},
+	"184":{
+		"id":184,
+		"pg":[184],
+		"pgChild":[{"className":"listItem","pg":[{"id":"183"},{"id":"190","value":"'*' counter(counter1)"}]},{"className":"listItem","pg":[{"id":"183"},{"id":"190","value":"'*' counter(counter1)"}]},{"className":"listItem","pg":[{"id":"183"},{"id":"190","value":"'*' counter(counter1)"}]},{"className":"listItem","pg":[{"id":"183"},{"id":"190","value":"'*' counter(counter1)"}]},
+			{"className":"listItem","pg":[{"id":"183"},{"id":"190","value":"'*' counter(counter1)"}]}],
+		"examples":[{"example":"ul{ counter-reset: my-counter 7;}","desc":"Resets the counter value to 7"}]
+	},
+	"185":{
+		"id":185,
+		"pg":[185,11],
+		"required":[{"prop":"border-collapse","value":"separate"}],
+		"examples":[{"example":"table{ empty-cells: hide;}","desc":"border-collapse property should be set to separate for this property to work"}]
+	},
+	"186":{
+		"id":186,
+		"pg":[186],
+		"examples":[{"example":"table{ caption-side: bottom;}"}]
+	},
+	"187":{
+		"id":187,
+		"pg":[59],
+		"required":[{"prop":"display","value":"block"}],
+		"pgChild":[{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]}],
+		"examples":[{"example":".items{ float: left;}","desc":"The float property will override the text-align property"}]
+	},
+	"188":{
+		"id":188,
+		"pg":[59,188],
+		"required":[{"prop":"display","value":"block"}],
+		"pgChild":[{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]},{"className":"item3","pg":[{"id":"187"}]}],
+		"examples":[{"example":".body{ clear: both;}"}]
+	},
+	"189":{
+		"id":189,
+		"required":[{"prop":"background","value":"grey"}],
+		"pg":[189],
+		"examples":[{"example":".body{ display: table-cell;}"}]
+	},
+	"190":{
+		"id":190,
+		"pg":[184],
+		"pgChild":[{"className":"listItem","pg":[{"id":"183"},{"id":"190"},{"id":"37","value":"20px"},{"id":"38","value":"20px"}]},{"className":"listItem","pg":[{"id":"183"},{"id":"190"},{"id":"37","value":"20px"},{"id":"38","value":"20px"}]},{"className":"listItem","pg":[{"id":"183"},{"id":"190"},{"id":"37","value":"20px"},{"id":"38","value":"20px"}]},{"className":"listItem","pg":[{"id":"183"},{"id":"190"},{"id":"37","value":"20px"},{"id":"38","value":"20px"}]},
+			{"className":"listItem","pg":[{"id":"183"},{"id":"190"},{"id":"37","value":"20px"},{"id":"38","value":"20px"}]}],
+		"examples":[{"example":"h2:after{ content: '';}"}]
+	}
+}

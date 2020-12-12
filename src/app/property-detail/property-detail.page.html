@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="util.dismissModal()">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{property.prop}}</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p *ngFor="let i of property.desc">{{i}}</p>
+  <section class="property-def" *ngIf="property.shortHand">
+    <code>
+      <span class="prop">{{property.prop}} <span class="splChara">:</span></span>
+        <span *ngFor="let j of shortHandProp">
+          <br>
+          <span class="splChara">[</span>
+          <span class="value"> {{j}} </span>
+          <span class="splChara">]</span>
+        </span>
+      <br>
+      <br>
+      <span class="comment">
+        /* It is a shorthand property, which means that it allows you write multiple CSS properties in one */
+      </span>
+    </code>
+  </section>
+  <section class="property-detail" *ngIf="propValue.length > 0">
+    <h4>Property Value</h4>
+    <table class="prop-table">
+      <tr *ngFor="let i of propValue">
+        <td class="prop-value"><code>{{i.name}}</code></td>
+        <td class="prop-desc">{{i.desc}}</td>
+      </tr>
+    </table>
+  </section>
+  <section class="example">
+    <h4>Examples</h4>
+    <ng-container *ngFor="let i of exampleData.examples">
+      <div class="code-ide" [innerHTML]="generateCSS(i.example)">
+        {{i.example}}
+      </div>
+      <p>{{i.desc}}</p>
+    </ng-container>
+  </section>
+  <section class="playground">
+    <h4>Playground</h4>
+    <div class="pg-box">
+
+    </div>
+  </section>
+  <section class="browser-support">
+    <h4>Browser Support</h4>
+    <div class="container">
+      <div class="browser-slot" [class.unsupported]="property.browser[i] == 'Not Supported'" *ngFor="let i of util.keys(property.browser)">
+        <img src="assets/imgs/{{i}}.png">
+        <span *ngIf="property.browser[i] != 'Not Supported' && property.browser[i] != 'Supported'">{{property.browser[i]}}</span>
+      </div>
+    </div>
+  </section>
+</ion-content>

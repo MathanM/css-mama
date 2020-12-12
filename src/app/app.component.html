@@ -3,12 +3,18 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>CSS MAMA</ion-list-header>
+          <ion-list-header>
+            <ion-label>CSS MAMA</ion-label>
+            <ion-button class="dark-btn" (click)="toggleTheme(!themeFlag)">
+              <ion-icon *ngIf="!themeFlag" slot="icon-only" name="sunny-outline" color="dark"></ion-icon>
+              <ion-icon *ngIf="themeFlag" slot="icon-only" name="moon-outline" color="dark"></ion-icon>
+            </ion-button>
+          </ion-list-header>
           <ion-note></ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-outline'"></ion-icon>
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>

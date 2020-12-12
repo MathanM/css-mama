@@ -1,12 +1,18 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>CSS SELECTORS</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list *ngFor="let group of selectorGroup">
-    <ion-item *ngFor="let i of group.value">
+    <ion-list-header lines="none" color="dark">
+      <ion-label>{{group.group}}</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let i of group.value" (click)="openProperty(selectorData[i])" lines="none">
       <ion-label>{{ selectorData[i].prop }}</ion-label>
     </ion-item>
   </ion-list>

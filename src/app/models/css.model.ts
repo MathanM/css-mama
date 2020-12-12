@@ -5,7 +5,7 @@ export interface CSSProp {
     type: string;
     pg: string[];
     madeOf: number[];
-    shortHand: number[];
+    shortHand: any[];
     values: CSSValue[];
     desc: string[];
     browser: BrowserSupport;
@@ -32,6 +32,7 @@ export interface CSSObject {
 export interface CSSValue {
     name: string;
     desc: string;
+    default?: boolean;
 }
 
 export interface BrowserSupport {
@@ -50,3 +51,19 @@ export interface CSSGroup {
 export interface CSSSelectorObject {
     [key: string]: CSSSelector;
 }
+
+export interface CSSExampleValue {
+    example: string;
+    desc: string;
+}
+
+export interface CSSPropExample {
+    id: number;
+    examples: CSSExampleValue[];
+    pg: number[];
+}
+
+export interface CSSExampleObject {
+    [key: string]: CSSPropExample;
+}
+

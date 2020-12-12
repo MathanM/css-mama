@@ -7,7 +7,7 @@
 			"desc":"You can use any combination of these properties that you like, in almost any order, anything you don't specify in the background property is automatically set to its default."
 			},
 			{
-			"example":".body{ background:url(sweettexture.jpg), url(texture2.jpg) black; background-repeat:repeat-x, no-repeat;}",
+			"example":".body{ background:url(sweet-texture.jpg), url(texture2.jpg) black; background-repeat:repeat-x, no-repeat;}",
 			"desc":"CSS3 added support for multiple backgrounds, which layer over the top of each other. Any property related to backgrounds can take a comma separated list."
 			}
 		],

@@ -1,8 +1,116 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>COLORS</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
+  <p>In CSS colors are represented in different values</p>
+  <ion-segment [(ngModel)]="colorType" color="violet">
+    <ion-segment-button value="hex">
+      <ion-label>Hex</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="rgb">
+      <ion-label>RGB</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="rgba">
+      <ion-label>RGBA</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="hsl">
+      <ion-label>HSL</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="hsla">
+      <ion-label>HSLA</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ng-container [ngSwitch]="colorType">
+    <div *ngSwitchCase="'hex'">
+      <h4>Hexadecimal Colors</h4>
+      <p>It is composed of Hexadecimal Integers of Red, Green and Blue, of values between 00 and FF.</p>
+      <p><strong>#RRGGBB</strong></p>
+    </div>
+    <div *ngSwitchCase="'rgb'">
+      <h4>RGB Colors</h4>
+      <p>It specifies the intensity of the color, Red, Green and Blue in integers between 0 and 255.</p>
+      <p><strong>rgb(red, green, blue)</strong></p>
+    </div>
+    <div *ngSwitchCase="'rgba'">
+      <h4>RGBA Colors</h4>
+      <p>It specifies the intensity of the color, Red, Green and Blue in integers between 0 and 255 and also Alpha which specifies the opacity</p>
+      <p>The Alpha values are between 0 and 1</p>
+      <p><strong>rgba(red, green, blue, alpha)</strong></p>
+    </div>
+    <div *ngSwitchCase="'hsl'">
+      <h4>HSL Colors</h4>
+      <p>It specifies the Hue, Saturation, and Lightness.</p>
+      <p>Hue is a degree, ranges from 0 to 360. Both Saturation and Lightness are percentage values between 0 to 100</p>
+      <p><strong>hsl(hue, saturation, lightness)</strong></p>
+    </div>
+    <div *ngSwitchCase="'hsla'">
+      <h4>HSLA Colors</h4>
+      <p>It specifies the Hue, Saturation, and Lightness and also Alpha which specifies the opacity</p>
+      <p>Hue is a degree, ranges from 0 to 360. Both Saturation and Lightness are percentage values between 0 to 100</p>
+      <p>The Alpha values are between 0 and 1</p>
+      <p><strong>hsla(hue, saturation, lightness, alpha)</strong></p>
+    </div>
+  </ng-container>
+  <section>
+    <div class="pg-box" [style.background]="color[colorType].value"></div>
+    <p class="txt-center">
+      <ion-chip color="violet">
+        <ion-icon name="color-palette" color="violet"></ion-icon>
+        <ion-label *ngIf="colorType=='hex'">{{color[colorType].value | uppercase}}</ion-label>
+        <ion-label *ngIf="colorType!='hex'">{{color[colorType].value}}</ion-label>
+      </ion-chip>
+    </p>
+    <ng-container *ngIf="colorType == 'hsl' || colorType == 'hsla'; else rgbBlock">
+      <ion-item lines="none">
+        <ion-range color="violet" min="0" max="360" [(ngModel)]="color.hsl.h.value" (ionChange)="onHexChange()">
+          <ion-label slot="start">{{color[colorType].h.label}} {{color[colorType].h.min}}</ion-label>
+          <ion-label slot="end">{{color[colorType].h.max}}</ion-label>
+        </ion-range>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-range color="violet" min="0" max="100" [(ngModel)]="color.hsl.s.value" (ionChange)="onHexChange()">
+          <ion-label slot="start">{{color[colorType].s.label}} {{color[colorType].s.min}}</ion-label>
+          <ion-label slot="end">{{color[colorType].s.max}}</ion-label>
+        </ion-range>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-range color="violet" min="0" max="100" [(ngModel)]="color.hsl.l.value" (ionChange)="onHexChange()">
+          <ion-label slot="start">{{color[colorType].l.label}} {{color[colorType].l.min}}</ion-label>
+          <ion-label slot="end">{{color[colorType].l.max}}</ion-label>
+        </ion-range>
+      </ion-item>
+    </ng-container>
+    <ng-template #rgbBlock>
+      <ion-item lines="none">
+        <ion-range color="violet" min="0" max="255" [(ngModel)]="color.rgb.r.value" (ionChange)="onHexChange()">
+          <ion-label slot="start">{{color[colorType].r.label}} {{color[colorType].r.min}}</ion-label>
+          <ion-label slot="end">{{color[colorType].r.max}}</ion-label>
+        </ion-range>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-range color="violet" min="0" max="255" [(ngModel)]="color.rgb.b.value" (ionChange)="onHexChange()">
+          <ion-label slot="start">{{color[colorType].b.label}} {{color[colorType].b.min}}</ion-label>
+          <ion-label slot="end">{{color[colorType].b.max}}</ion-label>
+        </ion-range>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-range color="violet" min="0" max="255" [(ngModel)]="color.rgb.g.value" (ionChange)="onHexChange()">
+          <ion-label slot="start">{{color[colorType].g.label}} {{color[colorType].g.min}}</ion-label>
+          <ion-label slot="end">{{color[colorType].g.max}}</ion-label>
+        </ion-range>
+      </ion-item>
+    </ng-template>
+    <ion-item lines="none" *ngIf="color[colorType].a">
+      <ion-range color="violet" min="0" max="10" [(ngModel)]="color[colorType].a.value" (ionChange)="onHexChange()">
+        <ion-label slot="start">{{color[colorType].a.label}} {{color[colorType].a.min}}</ion-label>
+        <ion-label slot="end">{{color[colorType].a.max}}</ion-label>
+      </ion-range>
+    </ion-item>
+  </section>
 </ion-content>

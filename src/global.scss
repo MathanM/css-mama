@@ -24,3 +24,64 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-header ion-toolbar{
+  --background: var(--ion-color-orange);
+  --color: var(--ion-color-dark-contrast)
+}
+body.dark{
+  .prop-table .prop-desc{
+    background: var(--ion-toolbar-background) !important;
+  }
+  .prop-table .prop-value{
+    background: #313131 !important;
+  }
+}
+p{
+  line-height: 1.43;
+  font-size: 15px;
+}
+h4{
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--ion-color-violet);
+}
+.txt-center{
+  text-align: center;
+}
+.pg-box{
+  width: 85%;
+  height: 200px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  margin: 20px auto 15px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background: #fff0bb;
+}
+.code-ide{
+  width: 100%;
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  color: #fff0bb;
+  line-height: 1.5;
+  white-space: pre;
+  tab-size: 2;
+  font-size: 15px;
+  overflow-x: auto;
+  font-family: monospace, monospace;
+  .splChara{
+    color: #fff;
+  }
+  .value{
+    color: var(--ion-color-orange);
+  }
+  .comment{
+    color: rgba(255,255,255,0.6);
+  }
+  .prop{
+    color: #baa5fb;
+  }
+}

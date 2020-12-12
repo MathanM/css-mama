@@ -1,5 +1,7 @@
 {
   "name": "css-mama",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

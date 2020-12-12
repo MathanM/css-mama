@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'colors',
     loadChildren: () => import('./colors/colors.module').then( m => m.ColorsPageModule)
   },
+  {
+    path: 'property-detail',
+    loadChildren: () => import('./property-detail/property-detail.module').then( m => m.PropertyDetailPageModule)
+  },
 ];
 
 @NgModule({

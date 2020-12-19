@@ -1,0 +1,119 @@
+{
+  "hex": {
+    "r": {
+      "value": "00",
+      "label": "RR:",
+      "min": "00",
+      "max": "FF"
+    },
+    "b": {
+      "value": "00",
+      "label": "BB:",
+      "min": "00",
+      "max": "FF"
+    },
+    "g": {
+      "value": "00",
+      "label": "GG:",
+      "min": "00",
+      "max": "FF"
+    },
+    "value": "#000000"
+  },
+  "rgb": {
+    "r": {
+      "value": "0",
+      "label": "R:",
+      "min": "0",
+      "max": "255"
+    },
+    "g": {
+      "value": "0",
+      "label": "G:",
+      "min": "0",
+      "max": "255"
+    },
+    "b": {
+      "value": "0",
+      "label": "B:",
+      "min": "0",
+      "max": "255"
+    },
+    "value": "rgb(0, 0, 0)"
+  },
+  "rgba": {
+    "r": {
+      "value": "0",
+      "label": "R:",
+      "min": "0",
+      "max": "255"
+    },
+    "g": {
+      "value": "0",
+      "label": "G:",
+      "min": "0",
+      "max": "255"
+    },
+    "b": {
+      "value": "0",
+      "label": "B:",
+      "min": "0",
+      "max": "255"
+    },
+    "a": {
+      "value": "10",
+      "label": "A:",
+      "min": "0",
+      "max": "1"
+    },
+    "value": "rgba(0, 0, 0, 1)"
+  },
+  "hsl": {
+    "h": {
+      "value": "0",
+      "label": "Hue:",
+      "min": "0",
+      "max": "360"
+    },
+    "s": {
+      "value": "0",
+      "label": "Saturation:",
+      "min": "0",
+      "max": "100"
+    },
+    "l": {
+      "value": "0",
+      "label": "Lightness:",
+      "min": "0",
+      "max": "100"
+    },
+    "value": "hsl(0, 0, 0)"
+  },
+  "hsla": {
+    "h": {
+      "value": "0",
+      "label": "Hue:",
+      "min": "0",
+      "max": "360"
+    },
+    "s": {
+      "value": "0",
+      "label": "Saturation:",
+      "min": "0",
+      "max": "100"
+    },
+    "l": {
+      "value": "0",
+      "label": "Lightness:",
+      "min": "0",
+      "max": "100"
+    },
+    "a": {
+      "value": "10",
+      "label": "Alpha:",
+      "min": "0",
+      "max": "1"
+    },
+    "value": "hsla(0, 0, 0, 1)"
+  }
+}

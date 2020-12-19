@@ -30,7 +30,9 @@ export class SelectorsPage implements OnInit, OnDestroy {
       component: PropertyDetailPage,
       cssClass: 'property-modal',
       componentProps: {
-        property: prop
+        property: prop,
+        exampleData: prop,
+        selector: true
       },
     });
   }

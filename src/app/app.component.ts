@@ -27,6 +27,16 @@ export class AppComponent implements OnInit {
       title: 'Colors',
       url: '/colors',
       icon: 'color-palette'
+    },
+    {
+      title: 'Length Units',
+      url: '/length-units',
+      icon: 'resize'
+    },
+    {
+      title: 'Flexbox',
+      url: '/flexbox',
+      icon: 'grid'
     }
   ];
   themeFlag = false;

@@ -520,10 +520,13 @@
     "css": "1",
     "prop": "border",
     "type": "select",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "pg": [
-      "10px dotted red",
-      "dashed",
-      "7px solid yellow",
+      "3px dashed red",
+      "4px solid yellow",
+      "dotted",
       "none"
     ],
     "madeOf": [
@@ -562,6 +565,9 @@
     "css": "1",
     "prop": "border-width",
     "type": "slider",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "pg": [
       "5px"
     ],
@@ -611,6 +617,9 @@
     "css": "1",
     "prop": "border-style",
     "type": "select",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "pg": [
       "dotted",
       "none",
@@ -690,6 +699,9 @@
     "id": 14,
     "css": "1",
     "prop": "border-color",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "pg": [
       "#92a8d1",
       "rgb(201, 76, 76)",
@@ -731,6 +743,9 @@
     "id": 15,
     "css": "3",
     "prop": "border-radius",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "desc": [
       "The border-radius property defines the radius of the element's corners",
       "This property can have from one to four values (first value applies to top-left corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner)"
@@ -769,6 +784,9 @@
     "id": 16,
     "css": "2",
     "prop": "border-collapse",
+    "style": "child",
+    "show": "pg-child-table",
+    "class": "center",
     "group": "tab",
     "desc": [
       "The border-collapse property sets whether table borders should collapse into a single border or be separated as in standard HTML."
@@ -809,11 +827,15 @@
     "id": 17,
     "css": "2",
     "prop": "border-spacing",
+    "style": "child",
+    "show": "pg-child-table",
+    "class": "center",
     "group": "tab",
     "type": "slider",
     "pg": [
       "5px"
     ],
+    "max": "20",
     "desc": [
       "The border-spacing property sets the distance between the borders of adjacent cells",
       "This property works only when border-collapse is separate and also used on <table> elements (or elements made to behave like a table through display: table or display: inline-table)."
@@ -844,6 +866,9 @@
     "id": 18,
     "css": "3",
     "prop": "border-image",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "type": "select",
     "pg": [
       "url(./assets/imgs/border.png) 30 round",
@@ -888,6 +913,9 @@
     "id": 19,
     "css": "3",
     "prop": "border-image-source",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "desc": [
       "This property specifies the path of the image to be used as a border"
     ],
@@ -926,6 +954,9 @@
     "id": 20,
     "css": "3",
     "prop": "border-image-slice",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "desc": [
       "This property tells where to slice the image to create the pieces of the border",
       "The image is divided into 9 sections — the four corners, the four sides, and the center."
@@ -968,13 +999,17 @@
     "id": 21,
     "css": "3",
     "prop": "border-image-width",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "desc": [
       "This property specifies the width of the border image"
     ],
     "type": "slider",
     "pg": [
-      "5"
+      "2"
     ],
+    "max": "5",
     "values": [
       {
         "name": "length",
@@ -1013,6 +1048,9 @@
     "id": 22,
     "css": "3",
     "prop": "border-image-outset",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "desc": [
       "This property specifies the amount by which the border image area extends beyond the border box."
     ],
@@ -1050,6 +1088,9 @@
     "id": 23,
     "css": "3",
     "prop": "border-image-repeat",
+    "show": "pg-child-1",
+    "style": "child",
+    "class": "center",
     "desc": [
       "This property specifies whether the border image should be repeated, rounded or stretched."
     ],
@@ -1098,6 +1139,7 @@
   "24": {
     "id": 24,
     "style": "child",
+    "show": "pg-child",
     "css": "1",
     "prop": "margin",
     "desc": [
@@ -1156,6 +1198,7 @@
     "style": "child",
     "css": "1",
     "prop": "margin-top",
+    "show": "pg-child",
     "desc": [
       "This property sets the top margin of the element"
     ],
@@ -1198,6 +1241,7 @@
     "style": "child",
     "css": "1",
     "prop": "margin-right",
+    "show": "pg-child",
     "desc": [
       "This property sets the right margin of the element"
     ],
@@ -1240,6 +1284,7 @@
     "style": "child",
     "css": "1",
     "prop": "margin-bottom",
+    "show": "pg-child",
     "desc": [
       "This property sets the bottom margin of the element"
     ],
@@ -1282,6 +1327,7 @@
     "style": "child",
     "css": "1",
     "prop": "margin-left",
+    "show": "pg-child",
     "desc": [
       "This property sets the left margin of the element"
     ],
@@ -1322,6 +1368,7 @@
   "29": {
     "id": 29,
     "css": "1",
+    "show": "pg-child-text",
     "prop": "padding",
     "desc": [
       "The padding property in CSS defines the innermost portion of the box model, creating space around an element's content, inside of any defined margins and/or borders."
@@ -1377,6 +1424,7 @@
   "30": {
     "id": 30,
     "css": "1",
+    "show": "pg-child-text",
     "prop": "padding-top",
     "desc": [
       "This property sets the top spacing of an element"
@@ -1418,6 +1466,7 @@
   "31": {
     "id": 31,
     "css": "1",
+    "show": "pg-child-text",
     "prop": "padding-right",
     "desc": [
       "This property sets the right spacing of an element"
@@ -1459,6 +1508,7 @@
   "32": {
     "id": 32,
     "css": "1",
+    "show": "pg-child-text",
     "prop": "padding-bottom",
     "desc": [
       "This property sets the bottom spacing of an element"
@@ -1501,6 +1551,7 @@
     "id": 33,
     "css": "1",
     "prop": "padding-left",
+    "show": "pg-child-text",
     "desc": [
       "This property sets the left spacing of an element"
     ],
@@ -1543,6 +1594,7 @@
     "css": "3",
     "prop": "box-sizing",
     "style": "child",
+    "show": "pg-child",
     "desc": [
       "The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not."
     ],
@@ -1583,6 +1635,7 @@
     "css": "3",
     "prop": "box-shadow",
     "style": "child",
+    "show": "pg-child",
     "desc": [
       "The box-shadow property attaches one or more shadows to an element."
     ],
@@ -1644,19 +1697,19 @@
   "36": {
     "id": 36,
     "css": "3",
-    "style": "child",
+    "show": "pg-child-text-1",
     "prop": "box-decoration-break",
     "class": "blockLevel",
-    "style": "child",
     "desc": [
-      "The box-decoration-break property specifies how the background, padding, border, border-image, box-shadow, margin, and clip-path of an element is applied when the box for the element is fragmented."
+      "The box-decoration-break property specifies how the background, padding, border, border-image, box-shadow, margin, and clip-path of an element is applied when the box for the element is fragmented.",
+      "It doesn't have effect inside flex and grid elements."
     ],
     "type": "select",
     "pg": [
       "slice",
       "clone"
     ],
-    "extn": true,
+    "extension": true,
     "values": [
       {
         "name": "slice",
@@ -1688,6 +1741,7 @@
     "id": 37,
     "css": "1",
     "prop": "width",
+    "show": "pg-child",
     "style": "child",
     "desc": [
       "The width property in CSS specifies the width of the element's content area. This content area is the portion inside the padding, border, and margin of an element ",
@@ -1748,6 +1802,7 @@
     "id": 38,
     "css": "1",
     "prop": "height",
+    "show": "pg-child",
     "style": "child",
     "desc": [
       "The height property in CSS specifies the height of the element's content area. This content area is the portion inside the padding, border, and margin of an element ",
@@ -1755,7 +1810,7 @@
     ],
     "type": "slider",
     "pg": [
-      "50px"
+      "60px"
     ],
     "max": "100",
     "values": [
@@ -1809,6 +1864,7 @@
     "id": 39,
     "css": "2",
     "prop": "min-width",
+    "show": "pg-child",
     "style": "child",
     "desc": [
       "The min-width property defines the minimum width of an element.",
@@ -1848,6 +1904,7 @@
     "id": 40,
     "css": "2",
     "prop": "max-width",
+    "show": "pg-child",
     "style": "child",
     "desc": [
       "The max-width property defines the maximum width of an element.",
@@ -1892,6 +1949,7 @@
     "id": 41,
     "css": "2",
     "prop": "min-height",
+    "show": "pg-child",
     "style": "child",
     "desc": [
       "The min-height property defines the minimum height of an element.",
@@ -1931,6 +1989,7 @@
     "id": 42,
     "css": "2",
     "prop": "max-height",
+    "show": "pg-child",
     "style": "child",
     "desc": [
       "The max-height property defines the maximum height of an element.",
@@ -1977,6 +2036,7 @@
     "prop": "outline",
     "class": "center",
     "style": "child",
+    "show": "pg-child-1",
     "desc": [
       "An outline is a line that is drawn around elements, outside the borders, to make the element stand out.",
       "It always goes around all the sides, you can't specify particular sides",
@@ -2021,6 +2081,7 @@
     "prop": "outline-width",
     "class": "center",
     "style": "child",
+    "show": "pg-child-1",
     "desc": [
       "This property specifies the width of an outline."
     ],
@@ -2069,6 +2130,7 @@
     "prop": "outline-style",
     "class": "center",
     "style": "child",
+    "show": "pg-child-1",
     "desc": [
       "This property specifies the style of an outline."
     ],
@@ -2150,6 +2212,7 @@
     "prop": "outline-color",
     "class": "center",
     "style": "child",
+    "show": "pg-child-1",
     "pg": [
       "#92a8d1",
       "rgb(201, 76, 76)",
@@ -2195,10 +2258,12 @@
     "prop": "outline-offset",
     "class": "center",
     "style": "child",
+    "show": "pg-child-1",
     "type": "slider",
     "pg": [
       "15px"
     ],
+    "max": "20",
     "desc": [
       "The outline-offset property adds space between an outline and the edge or border of an element",
       "The space between an element and its outline is transparent."
@@ -2231,9 +2296,11 @@
     "prop": "mix-blend-mode",
     "class": "center",
     "style": "child",
+    "show": "pg-child-img",
     "desc": [
       "The mix-blend-mode property defines how an element’s content should blend with its background.",
-      "This means that any images or text, borders or headings will be influenced by this property."
+      "This means that any images or text, borders or headings will be influenced by this property.",
+      "Often used in <img> tag to bend the image with the parent background"
     ],
     "pg": [
       "multiply",
@@ -2323,6 +2390,9 @@
     "css": "1",
     "prop": "vertical-align",
     "type": "select",
+    "style": "child",
+    "show": "pg-child-table",
+    "class": "center",
     "group": "tab",
     "desc": [
       "The vertical-align property sets the vertical alignment of an element.",
@@ -2399,7 +2469,7 @@
     "css": "1",
     "prop": "list-style",
     "class": "center",
-    "style": "child",
+    "show": "pg-child-list",
     "desc": [
       "This property specifies the style for list-item marker in a list"
     ],
@@ -2441,7 +2511,7 @@
     "css": "1",
     "prop": "list-style-type",
     "class": "center",
-    "style": "child",
+    "show": "pg-child-list",
     "desc": [
       "This property specifies the type of list-item marker in a list."
     ],
@@ -2582,7 +2652,7 @@
     "css": "1",
     "prop": "list-style-position",
     "class": "center",
-    "style": "child",
+    "show": "pg-child-list",
     "desc": [
       "This property specifies the position of the list-item markers in a list"
     ],
@@ -2623,7 +2693,7 @@
     "css": "1",
     "prop": "list-style-image",
     "class": "center",
-    "style": "child",
+    "show": "pg-child-list",
     "desc": [
       "This property replaces the list-item marker with an image"
     ],
@@ -2664,7 +2734,7 @@
     "id": 54,
     "css": "1",
     "prop": "letter-spacing",
-    "style": "child",
+    "show": "pg-child-para",
     "desc": [
       "The letter-spacing property increases or decreases the space between characters in a text."
     ],
@@ -2672,8 +2742,8 @@
     "pg": [
       "2px"
     ],
-    "min": "-5",
-    "max": "10",
+    "min": "-30",
+    "max": "30",
     "values": [
       {
         "name": "normal",
@@ -2705,7 +2775,7 @@
     "id": 55,
     "css": "1",
     "prop": "line-height",
-    "style": "child",
+    "show": "pg-child-para",
     "desc": [
       "The line-height property specifies the height of a line."
     ],
@@ -2751,6 +2821,7 @@
     "css": "3",
     "prop": "line-clamp",
     "style": "child",
+    "show": "pg-child-para",
     "desc": [
       "The line-clamp property truncates text at a specific number of lines"
     ],
@@ -2763,7 +2834,7 @@
       "1"
     ],
     "max": "5",
-    "extn": true,
+    "extension": true,
     "values": [
       {
         "name": "none",
@@ -2787,6 +2858,7 @@
     "css": "3",
     "prop": "tab-size",
     "style": "child",
+    "show": "pg-child-para-1",
     "desc": [
       "The tab-size property specifies the width of a tab character.",
       "In HTML, the tab character is usually displayed as a single space-character, except for some elements, like <textarea> and <pre>, and the result of the tab-size property will only be visible for those elements."
@@ -2829,6 +2901,7 @@
     "prop": "text-overflow",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para",
     "desc": [
       "The text-overflow property specifies how overflowed content that is not displayed should be signaled to the user. It can be clipped, display an ellipsis (...), or display a custom string."
     ],
@@ -2874,6 +2947,7 @@
     "css": "1",
     "prop": "text-align",
     "style": "child",
+    "show": "pg-child-para",
     "desc": [
       "The text-align property specifies the horizontal alignment of text in an element."
     ],
@@ -2922,6 +2996,7 @@
     "id": 60,
     "css": "3",
     "style": "child",
+    "show": "pg-child-para",
     "prop": "text-align-last",
     "desc": [
       "The text-align-last property specifies how to align the last line of a text.",
@@ -2988,6 +3063,7 @@
     "id": 61,
     "css": "3",
     "style": "child",
+    "show": "pg-child-para",
     "prop": "text-justify",
     "desc": [
       "The text-justify property specifies the justification method of text when text-align is set to justify"
@@ -3037,6 +3113,7 @@
     "id": 62,
     "css": "1",
     "style": "child",
+    "show": "pg-child-para",
     "prop": "text-indent",
     "desc": [
       "The text-indent property specifies the indentation of the first line in a text-block."
@@ -3078,6 +3155,7 @@
     "css": "1",
     "style": "child",
     "prop": "word-spacing",
+    "show": "pg-child-para",
     "desc": [
       "The word-spacing property increases or decreases the white space between words."
     ],
@@ -3119,6 +3197,7 @@
     "css": "3",
     "style": "child",
     "prop": "writing-mode",
+    "show": "pg-child-para",
     "desc": [
       "The writing-mode property specifies whether lines of text are laid out horizontally or vertically."
     ],
@@ -3155,6 +3234,7 @@
     "css": "2",
     "prop": "direction",
     "style": "child",
+    "show": "pg-child-para",
     "class": "blockLevel",
     "desc": [
       "The direction property specifies the text direction/writing direction within a block-level element."
@@ -3195,12 +3275,13 @@
     "id": 66,
     "css": "3",
     "prop": "block-overflow",
+    "show": "pg-child-para",
     "style": "child",
     "desc": [
       "The block-overflow property truncates text and indicates more content follows by inserting an ellipsis or custom string after a number of lines that is set by the max-lines property."
     ],
     "type": "select",
-    "extn": true,
+    "extension": true,
     "pg": [
       "ellipsis",
       "clip",
@@ -3242,12 +3323,14 @@
     "css": "3",
     "prop": "max-lines",
     "style": "child",
+    "show": "pg-child-para",
     "desc": [
       "This property specifies maximum number of lines to truncate."
     ],
     "type": "slider",
     "max": "10",
-    "extn": true,
+    "min": "0",
+    "extension": true,
     "pg": [
       "2"
     ],
@@ -3269,6 +3352,7 @@
     "id": 68,
     "css": "2",
     "prop": "unicode-bidi",
+    "show": "pg-child-para",
     "style": "child",
     "desc": [
       "The unicode-bidi property handle the rendering of bi-directional text in HTML.",
@@ -3331,6 +3415,7 @@
     "id": 69,
     "css": "1",
     "prop": "text-transform",
+    "show": "pg-child-para",
     "class": "center",
     "style": "child",
     "desc": [
@@ -3382,6 +3467,7 @@
     "id": 70,
     "css": "1",
     "prop": "text-decoration",
+    "show": "pg-child-para",
     "class": "center",
     "style": "child",
     "type": "select",
@@ -3427,6 +3513,7 @@
     "prop": "text-decoration-color",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para",
     "type": "select",
     "pg": [
       "#e600ff",
@@ -3465,6 +3552,7 @@
     "prop": "text-decoration-line",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para",
     "type": "select",
     "pg": [
       "underline",
@@ -3516,6 +3604,7 @@
     "prop": "text-decoration-style",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para",
     "type": "select",
     "pg": [
       "solid",
@@ -3570,6 +3659,7 @@
     "id": 74,
     "css": "3",
     "prop": "text-decoration-skip-ink",
+    "show": "pg-child-para",
     "class": "center",
     "style": "child",
     "type": "select",
@@ -3611,6 +3701,7 @@
     "id": 75,
     "css": "3",
     "prop": "text-underline-position",
+    "show": "pg-child-para",
     "class": "center",
     "style": "child",
     "type": "select",
@@ -3652,6 +3743,7 @@
     "id": 76,
     "css": "3",
     "prop": "text-shadow",
+    "show": "pg-child-para",
     "class": "center",
     "style": "child",
     "type": "select",
@@ -3708,6 +3800,7 @@
     "css": "3",
     "prop": "text-stroke",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "type": "select",
     "pg": [
@@ -3722,7 +3815,7 @@
       77,
       78
     ],
-    "extn": true,
+    "extension": true,
     "values": [
       {
         "name": "initial",
@@ -3750,12 +3843,13 @@
     "css": "3",
     "prop": "text-stroke-width",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "type": "slider",
     "pg": [
       "3px"
     ],
-    "extn": true,
+    "extension": true,
     "desc": [
       "This property describes the thickness of the stroke effect"
     ],
@@ -3786,9 +3880,10 @@
     "css": "3",
     "prop": "text-stroke-color",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "type": "select",
-    "extn": true,
+    "extension": true,
     "pg": [
       "#92a8d1",
       "rgb(201, 76, 76)",
@@ -3824,9 +3919,10 @@
     "css": "3",
     "prop": "text-fill-color",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "type": "select",
-    "extn": true,
+    "extension": true,
     "desc": [
       "This property specifies the color of the text.",
       "The text-fill-color will override the color property",
@@ -3864,6 +3960,7 @@
     "css": "1",
     "prop": "color",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "type": "select",
     "pg": [
@@ -3901,6 +3998,7 @@
     "css": "1",
     "prop": "font",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "shortHand": [
       83,
@@ -3983,6 +4081,7 @@
     ],
     "type": "select",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "values": [
       {
@@ -4020,6 +4119,7 @@
     "css": "1",
     "prop": "font-variant",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "desc": [
       "This property specifies whether or not a text should be displayed in a small-caps font"
@@ -4061,6 +4161,7 @@
     "css": "1",
     "prop": "font-weight",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "desc": [
       "This property sets how thick or thin characters in text should be displayed."
@@ -4129,8 +4230,9 @@
     ],
     "class": "center",
     "style": "child",
+    "show": "pg-child-para",
     "min": "5",
-    "max": "35",
+    "max": "20",
     "type": "slider",
     "values": [
       {
@@ -4199,6 +4301,7 @@
     "id": 87,
     "css": "1",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "prop": "font-family",
     "desc": [
@@ -4240,6 +4343,7 @@
     "css": "3",
     "prop": "font-stretch",
     "class": "center",
+    "show": "pg-child-para",
     "style": "child",
     "desc": [
       "The font-stretch property allows you to make text wider or narrower.",
@@ -4317,15 +4421,18 @@
     "css": "3",
     "prop": "font-feature-settings",
     "class": "center",
+    "show": "pg-child-para-2",
     "style": "child",
-    "extn": true,
+    "extension": true,
     "desc": [
       "This property gives us control over advanced typographic settings such as small caps, ligatures, and swashes",
       "To activate them you must declare which value you need in quotes and then followed by either 1 or on to enable. Alternatively, you can disable them with either 0 or off"
     ],
     "pg": [
-      "'liga' on",
-      "'liga' off"
+      "'liga'",
+      "'liga' 0",
+      "'tnum'",
+      "'smcp','zero'"
     ],
     "type": "select",
     "values": [
@@ -4467,6 +4574,7 @@
     "step": "0.1",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para",
     "type": "slider",
     "values": [
       {
@@ -6944,7 +7052,8 @@
     "class": "center",
     "desc": [
       "The isolation property defines whether an element must create a new stacking content.",
-      "The isolation property is helpful when used with background-blend-mode or mix-blend-mode."
+      "The isolation property is helpful when used with background-blend-mode or mix-blend-mode.",
+      "The isolation property in CSS is used to prevent elements from blending with their backdrops."
     ],
     "type": "select",
     "pg": [
@@ -8229,7 +8338,7 @@
     "prop": "hyphens",
     "style": "child",
     "class": "center",
-    "extn": true,
+    "extension": true,
     "desc": [
       "The hyphens property defines whether hyphenation is allowed to create more soft wrap opportunities within a line of text."
     ],
@@ -8616,10 +8725,10 @@
     ],
     "type": "select",
     "pg": [
-      "4px double #ff00ff",
-      "3px solid yellow",
-      "dashed",
-      "10px dotted red",
+      "2px double #ff00ff",
+      "4px solid yellow",
+      "dotted",
+      "3px dashed red",
       "none"
     ],
     "desc": [
@@ -9025,6 +9134,8 @@
     "prop": "empty-cells",
     "type": "select",
     "style": "child",
+    "class": "center",
+    "show": "pg-child-table-1",
     "desc": [
       "This property is to determine whether to display border or background on empty table cells"
     ],
@@ -9065,6 +9176,9 @@
     "group": "tab",
     "prop": "caption-side",
     "type": "select",
+    "show": "pg-child-table",
+    "class": "center",
+    "style": "child",
     "pg": [
       "top",
       "bottom"

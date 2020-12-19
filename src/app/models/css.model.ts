@@ -4,16 +4,17 @@ export interface CSSProp {
     prop: string;
     type: string;
     pg: string[];
+    style?: string;
+    show?: string;
+    class?: string;
+    min?: string;
+    max?: string;
+    extension?: boolean;
     madeOf: number[];
     shortHand: any[];
     values: CSSValue[];
     desc: string[];
     browser: BrowserSupport;
-}
-
-interface CSSExample {
-    example: string;
-    html: string;
 }
 
 export interface CSSSelector {
@@ -22,7 +23,7 @@ export interface CSSSelector {
     prop: string;
     desc: string[];
     browser: BrowserSupport;
-    examples: CSSExample[];
+    examples: CSSExampleValue[];
 }
 
 export interface CSSObject {
@@ -54,13 +55,20 @@ export interface CSSSelectorObject {
 
 export interface CSSExampleValue {
     example: string;
-    desc: string;
+    desc?: string;
+    html?: string;
 }
 
 export interface CSSPropExample {
     id: number;
     examples: CSSExampleValue[];
     pg: number[];
+    required?: CSSRequiredProp[];
+    comment?: string;
+}
+export interface CSSRequiredProp{
+    prop: string;
+    value: string;
 }
 
 export interface CSSExampleObject {

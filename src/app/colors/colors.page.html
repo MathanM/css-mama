@@ -57,7 +57,7 @@
       <p><strong>hsla(hue, saturation, lightness, alpha)</strong></p>
     </div>
   </ng-container>
-  <section>
+  <section *ngIf="color">
     <div class="pg-box" [style.background]="color[colorType].value"></div>
     <p class="txt-center">
       <ion-chip color="violet">
@@ -107,9 +107,9 @@
       </ion-item>
     </ng-template>
     <ion-item lines="none" *ngIf="color[colorType].a">
-      <ion-range color="violet" min="0" max="10" [(ngModel)]="color[colorType].a.value" (ionChange)="onHexChange()">
-        <ion-label slot="start">{{color[colorType].a.label}} {{color[colorType].a.min}}</ion-label>
-        <ion-label slot="end">{{color[colorType].a.max}}</ion-label>
+      <ion-range color="violet" min="0" max="10" [(ngModel)]="color.rgba.a.value" (ionChange)="onHexChange()">
+        <ion-label slot="start">{{color.rgba.a.label}} {{color.rgba.a.min}}</ion-label>
+        <ion-label slot="end">{{color.rgba.a.max}}</ion-label>
       </ion-range>
     </ion-item>
   </section>

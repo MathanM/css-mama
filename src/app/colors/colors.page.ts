@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ColorTypes} from '../models/color.model';
+import {AppService} from '../app.service';
+import {take} from 'rxjs/operators';
 
 @Component({
   selector: 'app-colors',
@@ -6,129 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./colors.page.scss'],
 })
 export class ColorsPage implements OnInit {
-  constructor() { }
-  color: any;
+  constructor(private service: AppService,) { }
+  color: ColorTypes;
   colorType = 'hex';
   ngOnInit() {
-    this.color = {
-      hex: {
-        r: {
-          value: '00',
-          label: 'RR:',
-          min: '00',
-          max: 'FF'
-        },
-        b: {
-          value: '00',
-          label: 'BB:',
-          min: '00',
-          max: 'FF'
-        },
-        g: {
-          value: '00',
-          label: 'GG:',
-          min: '00',
-          max: 'FF'
-        },
-        value: '#000000'
-      },
-      rgb: {
-        r: {
-          value: '0',
-          label: 'R:',
-          min: '0',
-          max: '255'
-        },
-        g: {
-          value: '0',
-          label: 'G:',
-          min: '0',
-          max: '255'
-        },
-        b: {
-          value: '0',
-          label: 'B:',
-          min: '0',
-          max: '255'
-        },
-        value: 'rgb(0, 0, 0)'
-      },
-      rgba: {
-        r: {
-          value: '0',
-          label: 'R:',
-          min: '0',
-          max: '255'
-        },
-        g: {
-          value: '0',
-          label: 'G:',
-          min: '0',
-          max: '255'
-        },
-        b: {
-          value: '0',
-          label: 'B:',
-          min: '0',
-          max: '255'
-        },
-        a: {
-          value: '10',
-          label: 'A:',
-          min: '0',
-          max: '1'
-        },
-        value: 'rgba(0, 0, 0, 1)'
-      },
-      hsl: {
-        h: {
-          value: '0',
-          label: 'Hue:',
-          min: '0',
-          max: '360'
-        },
-        s: {
-          value: '0',
-          label: 'Saturation:',
-          min: '0',
-          max: '100'
-        },
-        l: {
-          value: '0',
-          label: 'Lightness:',
-          min: '0',
-          max: '100'
-        },
-        value: 'hsl(0, 0, 0)'
-      },
-      hsla: {
-        h: {
-          value: '0',
-          label: 'Hue:',
-          min: '0',
-          max: '360'
-        },
-        s: {
-          value: '0',
-          label: 'Saturation:',
-          min: '0',
-          max: '100'
-        },
-        l: {
-          value: '0',
-          label: 'Lightness:',
-          min: '0',
-          max: '100'
-        },
-        a: {
-          value: '10',
-          label: 'Alpha:',
-          min: '0',
-          max: '1'
-        },
-        value: 'hsla(0, 0, 0, 1)'
-      }
-    };
+    this.service.getColorConfig().pipe(take(1)).subscribe((val) => {
+      this.color = val;
+    });
   }
   onHexChange() {
     this.getPrimaryColors();
@@ -164,7 +51,7 @@ export class ColorsPage implements OnInit {
     let a = this.color.hsl.h.value;
     const i = this.color.hsl.s.value / 100;
     const s = this.color.hsl.l.value / 100;
-    a >= 360 && (a = 0), a /= 60, l = 255 * this.hue2rgb(e = 2 * s - (t = s <= .5 ? s * (i + 1) : s + i - s * i), t, a + 2), n = 255 * this.hue2rgb(e, t, a), u = 255 * this.hue2rgb(e, t, a - 2), this.color.rgb.r.value = Math.round(l), this.color.rgb.g.value = Math.round(n), this.color.rgb.b.value = Math.round(u), console.log(this.color.rgb);
+    a >= 360 && (a = 0), a /= 60, l = 255 * this.hue2rgb(e = 2 * s - (t = s <= .5 ? s * (i + 1) : s + i - s * i), t, a + 2), n = 255 * this.hue2rgb(e, t, a), u = 255 * this.hue2rgb(e, t, a - 2), this.color.rgb.r.value = Math.round(l), this.color.rgb.g.value = Math.round(n), this.color.rgb.b.value = Math.round(u);
   }
   getHSL() {
     let l, n, u, e = this.color.rgb.r.value / 255,

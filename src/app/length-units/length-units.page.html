@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>LENGTH UNITS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>Length is a number followed by a length unit. A whitespace cannot appear between the number and the unit.</p>
+  <p>If the value is 0, the unit can be omitted. The length units are of two types.</p>
+  <ion-segment [(ngModel)]="lengthType" color="violet">
+    <ion-segment-button value="abs">
+      <ion-label>Absolute Length</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="rel">
+      <ion-label>Relative Length</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <ng-container [ngSwitch]="lengthType">
+    <div *ngSwitchCase="'abs'">
+      <h4>Absolute Length</h4>
+      <p>The length units which are fixed and which doesn't vary according to the screen resolution are called Absoulte lengths.</p>
+      <table class="prop-table">
+        <tr>
+          <td class="prop-value"><code>cm</code></td>
+          <td class="prop-desc">centimeters</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>mm</code></td>
+          <td class="prop-desc">millimeters</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>in</code></td>
+          <td class="prop-desc">inches</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>px</code></td>
+          <td class="prop-desc">pixels</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>pt</code></td>
+          <td class="prop-desc">points</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>pc</code></td>
+          <td class="prop-desc">picas</td>
+        </tr>
+      </table>
+    </div>
+    <div *ngSwitchCase="'rel'">
+      <h4>Relative Length</h4>
+      <p>The length units which are not fixed and relative to the another length property like font-size, width and height of parent or viewport are called Relative lengths.</p>
+      <table class="prop-table">
+        <tr>
+          <td class="prop-value"><code>em</code></td>
+          <td class="prop-desc">Relative to the font size of the element</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>ex</code></td>
+          <td class="prop-desc">Relative to the x-height of the current font</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>ch</code></td>
+          <td class="prop-desc">Relative to width of the "0"</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>rem</code></td>
+          <td class="prop-desc">Relative to font-size of the root element</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>vw</code></td>
+          <td class="prop-desc">Relative to 1% of the viewport width</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>vh</code></td>
+          <td class="prop-desc">Relative to 1% of the viewport height</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>vmin</code></td>
+          <td class="prop-desc">Relative to 1% of the viewport smaller dimension (smaller of 1vh or 1vw)</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>vmax</code></td>
+          <td class="prop-desc">Relative to 1% of the viewport larger dimension (greater of 1vh or 1vw)</td>
+        </tr>
+        <tr>
+          <td class="prop-value"><code>%</code></td>
+          <td class="prop-desc">Relative to the parent element</td>
+        </tr>
+      </table>
+    </div>
+  </ng-container>
+</ion-content>

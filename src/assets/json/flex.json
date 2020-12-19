@@ -1,0 +1,114 @@
+{
+  "flexContainer":[
+    {
+      "title": "Display",
+      "desc": ["The flex or inline-flex defines the one dimensional layout model. This method could offer space distribution between items in an interface and powerful alignment capabilities."],
+      "examples": [
+        {
+          "code": ".container{ display:flex;}"
+        },
+        {
+          "code": ".container{ display:inline-flex;}"
+        }
+      ],
+      "img": {
+        "url": ["assets/imgs/1.png"],
+        "layout": "center-1"
+      }
+    },
+    {
+      "title": "Flex-Direction",
+      "desc": ["There are two axes in flexbox, the main axis and the cross axis. The main axis is defined by the flex-direction property, and the cross axis runs perpendicular to it."],
+      "img": {
+        "url": ["assets/imgs/2.png"]
+      }
+    },
+    {
+      "title": "Flex-Wrap",
+      "desc": ["The flex-items are arranged in a single line by default and flex-wrap helps to wrap the items."],
+      "img": {
+        "url": ["assets/imgs/5.png"],
+        "layout": "center-1"
+      }
+    },
+    {
+      "title": "Flex-Flow",
+      "desc": ["The flex-flow is the combination of two properties flex-direction and flex-wrap which defines the main and cross axes of the flex container."],
+      "examples": [
+        {
+          "code": ".container{ flex-flow:[ flex-direction ] [ flex-wrap ];}"
+        }
+      ]
+    },
+    {
+      "title": "Align-Items",
+      "desc": ["It defines the alignment of flex items along the cross axis."],
+      "img": {
+        "url": ["assets/imgs/8.png"],
+        "layout": "center-1"
+      }
+    },
+    {
+      "title": "Justify-Content",
+      "desc": ["It defines the alignment of flex items along the main axis."],
+      "img": {
+        "url": ["assets/imgs/7.png"],
+        "layout": "center-1"
+      }
+    },
+    {
+      "title": "Align-Content",
+      "desc": ["It defines how each line of flex items are aligned within a flexbox. It works only if flex-wrap: wrap is applied and if there are multiple lines of flex items."],
+      "img": {
+        "url": ["assets/imgs/9.png"],
+        "layout": "center-1"
+      }
+    }
+  ],
+  "flexItem": [
+    {
+      "title": "Order",
+      "desc": ["The order property defines the positional order of the items inside the flex-container. By default, the flex-items follows source order."],
+      "img": {
+        "url": ["assets/imgs/3.png"],
+        "layout": "center-1"
+      }
+    },
+    {
+      "title": "Flex-Grow",
+      "desc": ["It defines the grow factor of each flexbox items to fill up the available space."],
+      "examples": [
+        {
+          "code": ".flex-item{ flex-grow:0;}",
+          "desc": "The element will not grow if there's space available. It will only use the space it needs."
+        }
+      ],
+      "img": {
+        "url": ["assets/imgs/4.png"],
+        "layout": "center-1"
+      }
+    },
+    {
+      "title": "Flex-Shrink",
+      "desc": ["It defines how much a flexbox item should shrink if there's not enough space available."]
+    },
+    {
+      "title": "Flex-Basis",
+      "desc": ["It defines the initial size of a flexbox item."],
+      "examples": [
+        {
+          "code": ".flex-item{ flex-basis:120px;}",
+          "desc": "The element will wrap its content to avoid any overflow."
+        }
+      ]
+    },
+    {
+      "title": "Align-Self",
+      "desc": ["This property helps to override the alignment specified by the align-items for specified flex items."],
+      "img": {
+        "url": ["assets/imgs/6.png"],
+        "layout": "center-1"
+      }
+    }
+  ]
+}

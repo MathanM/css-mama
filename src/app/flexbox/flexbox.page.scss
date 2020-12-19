@@ -1,0 +1,33 @@
+ion-content{
+  --padding-top: 10px;
+  --padding-bottom: 15px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+}
+h3{
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+ion-card{
+  margin: 20px 10px;
+  --background: rgba(var(--ion-color-yellow-base-rgb),0.9);
+  box-shadow: none;
+  &:nth-child(even){
+    --background: rgba(var(--ion-color-violet-rgb),0.3);
+  }
+  p{
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 8px;
+  }
+}
+.img-layout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.center-1{
+    img{
+      width: 80%;
+    }
+  }
+}

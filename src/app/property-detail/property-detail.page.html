@@ -28,6 +28,15 @@
       </span>
     </code>
   </section>
+  <section class="property-def" *ngIf="selector">
+    <code>
+      <span class="selector">{{property.prop}} <span class="splChara">{{'{'}}</span></span>
+      <br>
+      <span class="comment">&nbsp;&nbsp;// CSS Declarations</span>
+      <br>
+      <span class="splChara">{{'}'}}</span>
+    </code>
+  </section>
   <section class="property-detail" *ngIf="propValue.length > 0">
     <h4>Property Value</h4>
     <table class="prop-table">
@@ -37,19 +46,87 @@
       </tr>
     </table>
   </section>
-  <section class="example">
+  <section class="example" *ngIf="exampleData.examples">
     <h4>Examples</h4>
     <ng-container *ngFor="let i of exampleData.examples">
       <div class="code-ide" [innerHTML]="generateCSS(i.example)">
         {{i.example}}
       </div>
-      <p>{{i.desc}}</p>
+      <div class="code-ide html" [innerHTML]="generateHTML(i.html)" *ngIf="i.html">
+        {{i.html}}
+      </div>
+      <p [innerHTML]="i.desc"></p>
     </ng-container>
   </section>
   <section class="playground">
     <h4>Playground</h4>
-    <div class="pg-box">
-
+    <div class="pg-box {{property.class}}" [ngStyle]="property.style === 'child'?{}:style">
+      <div *ngIf="property.show === 'pg-child'" class="pg-child" [class]="childClass" [ngStyle]="style"></div>
+      <div *ngIf="property.show === 'pg-child-1'" class="pg-child-1" [class]="childClass" [ngStyle]="style"></div>
+      <img *ngIf="property.show === 'pg-child-img'" class="pg-child-img" [ngStyle]="style" src="assets/imgs/tiger.png">
+      <div *ngIf="property.show === 'pg-child-text'" class="pg-child-text">Hello</div>
+      <span *ngIf="property.show === 'pg-child-text-1'" class="pg-child-text-1" [ngStyle]="style">Hello!<br>I love<br>CSS</span>
+      <ul *ngIf="property.show === 'pg-child-list'" class="pg-child-list" [ngStyle]="style">
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+      </ul>
+      <p *ngIf="property.show === 'pg-child-para'" class="pg-child-para" [ngStyle]="style">Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.</p>
+      <pre *ngIf="property.show === 'pg-child-para-1'" class="pg-child-para" [ngStyle]="style">{{'Ram:\tHow are you?\nRavi:\tI am fine. How about you Ram?\nRam:\tGood!'}}</pre>
+      <p *ngIf="property.show === 'pg-child-para-2'" class="pg-child-para" [ngStyle]="style">
+        The Text here is broken in to difficult ligature <br>
+        13.41:00:12.75 - 0o
+      </p>
+      <table *ngIf="property.show === 'pg-child-table'" class="pg-child-table" [ngStyle]="style">
+        <caption><strong>Caption:</strong> Simple Table</caption>
+        <tbody>
+        <tr><th colspan="3">header</th></tr>
+        <tr><td>1</td><td [ngStyle]="style">2</td><td>3</td></tr>
+        <tr><td>4</td><td>5</td><td>6</td></tr>
+        </tbody>
+      </table>
+      <table *ngIf="property.show === 'pg-child-table-1'" class="pg-child-table" [ngStyle]="style">
+        <tbody>
+        <tr><th colspan="3">header</th></tr>
+        <tr><td>1</td><td></td><td>3</td></tr>
+        <tr><td></td><td>5</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ion-item *ngIf="cssData[selectedId].type === 'select'">
+      <ion-label>{{cssData[selectedId].prop}}</ion-label>
+      <ion-select [(ngModel)]="style[cssData[selectedId].prop]" okText="Ok" cancelText="Cancel" (ngModelChange)="onStyleChange()">
+        <ion-select-option *ngFor="let i of cssData[selectedId].pg" [value]="i">{{i}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item *ngIf="cssData[selectedId].type === 'slider'">
+      <ion-range color="violet" [min]="cssData[selectedId].min?cssData[selectedId].min:0" [max]="cssData[selectedId].max?cssData[selectedId].max:50" [(ngModel)]="style[cssData[selectedId].prop]" (ngModelChange)="onSliderChange()">
+        <ion-label slot="start">{{cssData[selectedId].min?cssData[selectedId].min:0}} {{selectedUnit}}</ion-label>
+        <ion-label slot="end">{{cssData[selectedId].max?cssData[selectedId].max:50}} {{selectedUnit}}</ion-label>
+      </ion-range>
+    </ion-item>
+    <div class="code-ide">
+      <span class="">.{{parentClass}} <span class="splChara">{{'{\n\t'}}</span></span>
+      <ng-container *ngIf="exampleData.pg">
+        <span class="prop" *ngFor="let i of exampleData.pg; let l=last;" (click)="onPropertyClick(i)">
+          {{cssData[i].prop}}<span class="splChara">: </span>
+          <span class="value">{{style[cssData[i].prop]}}</span>
+          <span class="splChara">;{{l ? '' : '\n\t'}}</span>
+        </span>
+      </ng-container>
+      <ng-container *ngIf="exampleData.required">
+          <span class="prop" *ngFor="let j of exampleData.required; let l=last;let f=first;">
+            {{f ? '\n\t ' : ''}}{{j.prop}}<span class="splChara">: </span>
+            <span class="value">{{j.value}}</span>
+            <span class="splChara">;{{l ? '' : '\n\t'}}</span>
+          </span>
+      </ng-container>
+      <span class="splChara">{{'\n}'}}</span>
+      <ng-container *ngIf="exampleData.comment">
+        <br>
+        <span class="comment">/* {{exampleData.comment}} */</span>
+      </ng-container>
     </div>
   </section>
   <section class="browser-support">

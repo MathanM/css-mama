@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {CSSExampleObject, CSSGroup, CSSObject, CSSSelectorObject} from './models/css.model';
+import {ColorTypes} from './models/color.model';
+import {FlexObject} from './models/flex.model';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +26,11 @@ export class AppService {
   }
   getCSSSelectorGroup(): Observable<CSSGroup[]>{
     return this.http.get<CSSGroup[]>('assets/json/selector-group.json');
+  }
+  getColorConfig(): Observable<ColorTypes>{
+    return this.http.get<ColorTypes>('assets/json/color.json');
+  }
+  getCSSFlexbox(): Observable<FlexObject>{
+    return this.http.get<FlexObject>('assets/json/flex.json');
   }
 }

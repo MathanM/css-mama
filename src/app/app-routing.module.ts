@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'property-detail',
     loadChildren: () => import('./property-detail/property-detail.module').then( m => m.PropertyDetailPageModule)
   },
+  {
+    path: 'length-units',
+    loadChildren: () => import('./length-units/length-units.module').then( m => m.LengthUnitsPageModule)
+  },
+  {
+    path: 'flexbox',
+    loadChildren: () => import('./flexbox/flexbox.module').then( m => m.FlexboxPageModule)
+  },
 ];
 
 @NgModule({

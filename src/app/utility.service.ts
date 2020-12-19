@@ -25,4 +25,42 @@ export class UtilityService {
   keys(obj: any): any[]{
     return Object.keys(obj);
   }
+  generateCSS(code: string): string{
+    let out = code;
+    let e = '';
+    let p = '';
+    const splChars = ['{', '}', ':', ';'];
+    out = out.replace(
+        new RegExp(/\s(\w+)([-\w]+)(?=:)/g),
+        '<span class="prop">$&</span>'
+    );
+    out = out.replace(
+        /:(.*?)(?=;)/g,
+        '<span class="value">$&</span>'
+    );
+    splChars.forEach(c => {
+      if (c === '{'){
+        e = '\n\t';
+        p = ' ';
+      }else if (c === ';'){
+        e = '\n\t';
+        p = '';
+      }else if (c === ':'){
+        e = ' ';
+        p = '';
+      }else if (c === '}'){
+        e = '\n';
+        p = '';
+      }
+      out = out.replace(
+          new RegExp(c, 'g'),
+          p + '<span class="splChara">' + c + '</span>' + e
+      );
+      out = out.replace(
+          new RegExp(/\t<span class="splChara">}<\/span>/g),
+          '<span class="splChara">}</span>'
+      );
+    });
+    return out;
+  }
 }

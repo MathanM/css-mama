@@ -3,6 +3,9 @@ ion-content {
   --padding-start: 15px;
   --padding-end: 15px;
   --padding-bottom: 15px;
+  > p {
+    margin-bottom: 14px;
+  }
 }
 
 p {
@@ -15,6 +18,9 @@ p {
   border-radius: 8px;
   margin: 15px 0;
   color: #fff;
+  .selector{
+    color: #fff0bb;
+  }
   .splChara{
     color: #fff;
   }
@@ -28,22 +34,58 @@ p {
     color: #baa5fb;
   }
 }
-.prop-table{
-  border-collapse: separate;
-  border-spacing: 5px;
-  td,th{
-    padding: 7px;
-    font-size: 14px;
-    line-height: 1.3;
+.pg-box{
+  &.blockLevel{
+    display: block;
   }
-  .prop-value{
-    background: rgba(var(--ion-color-tertiary-rgb),0.5);
+  &.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .prop-desc{
-    background: #fff0bb;
+  .pg-child-text-1{
+    background: linear-gradient(to bottom right, #ff0, green);
+    box-shadow: 8px 8px 10px 0 #ff1493, -5px -5px 5px 0 #00f, 5px 5px 15px 0 #ff0;
+    padding: 0 1em;
+    border-radius: 16px;
+    border-style: solid;
+    margin-left: 40px;
+    line-height: 2.5;
+    max-width: 100px;
+  }
+  .pg-child-list{
+    margin: 0;
+    padding: 0;
+    border: 1px solid;
+    li{
+      padding: 3px;
+    }
+  }
+  .pg-child-para{
+    padding: 15px;
+  }
+  .pg-child-img{
+    width: 50%;
+  }
+  .pg-child-1{
+    width: 60%;
+    height: 130px;
+    background: white;
+  }
+  .pg-child-table{
+    width: 70%;
+    caption{
+      padding: 5px;
+    }
+    td,th{
+      height: 35px;
+      text-align: center;
+      vertical-align: middle;
+      background: #90adcc;
+      border: 1px solid;
+    }
   }
 }
-
 .browser-support {
   .container {
     display: flex;

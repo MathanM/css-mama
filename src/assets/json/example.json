@@ -687,7 +687,7 @@
 	"119":{
 		"id":119,
 		"pg":[119],
-		"examples":[{"example":".body{ cursor:url(ball.cur),auto;}"},{"example":".body{ cursor:url(images/my-cursor.png), auto;}"}]
+		"examples":[{"example":".body{ cursor:url(ball.cur), auto;}"},{"example":".body{ cursor:url(images/my-cursor.png), auto;}","desc": "Provide image or gif url for custom cursors"}]
 	},
 	"120":{
 		"id":120,
@@ -727,19 +727,19 @@
 	"127":{
 		"id":127,
 		"required":[{"prop":"display","value":"flex"}],
-		"pgChild":[{"className":"item1","pg":[{"id":"128"},{"id":"129"},{"id":"130"}]},
-			{"className":"item2","pg":[{"id":"128","value":"0"},{"id":"130"}]},
-			{"className":"item3","pg":[{"id":"128","value":"1"},{"id":"130"}]},
-			{"className":"item4","pg":[{"id":"128","value":"0"},{"id":"130"}]}],
+		"pgChild":[{"className":"item1","pg":[{"id":"127"}]},
+			{"className":"item2","pg":[{"id":"127"}]},
+			{"className":"item3","pg":[{"id":"127"}]},
+			{"className":"item4","pg":[{"id":"127"}]}],
 		"examples":[{"example":".body{ flex:1 3 200px;}"}]
 	},
 	"128":{
 		"id":128,
 		"required":[{"prop":"display","value":"flex"}],
 		"pgChild":[{"className":"item1","pg":[{"id":"128"},{"id":"129"},{"id":"130"}]},
-			{"className":"item2","pg":[{"id":"128","value":"0"},{"id":"130"}]},
-			{"className":"item3","pg":[{"id":"128","value":"0"},{"id":"130"}]},
-			{"className":"item4","pg":[{"id":"128","value":"0"},{"id":"130"}]}],
+			{"className":"item2","pg":[{"id":"128"},{"id":"130"}]},
+			{"className":"item3","pg":[{"id":"128"},{"id":"130"}]},
+			{"className":"item4","pg":[{"id":"128"},{"id":"130"}]}],
 		"examples":[{"example":".body{ flex-grow:2;}"}]
 	},
 	"129":{
@@ -804,16 +804,16 @@
 		"id":136,
 		"pg":[132,133,134,136],
 		"required":[{"prop":"display","value":"flex"}],
-		"pgChild":[{"className":"item1","pg":[{"id":"130"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"}]},{"className":"item4","pg":[{"id":"130"}]},
-			{"className":"item5","pg":[{"id":"130"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
 		"examples":[{"example":".body{ align-content:center;}"}]
 	},
 	"137":{
 		"id":137,
 		"pg":[132,133,134,136,137],
 		"required":[{"prop":"display","value":"flex"}],
-		"pgChild":[{"className":"item1","pg":[{"id":"130"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"}]},{"className":"item4","pg":[{"id":"130"}]},
-			{"className":"item5","pg":[{"id":"130"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
 		"examples":[{"example":".body{ justify-content:space-between;}"}]
 	},
 	"138":{
@@ -996,7 +996,7 @@
 	},
 	"165":{
 		"id":165,
-		"pgChild":[{"className":"item1","pg":[{"id":"165"}]},{"className":"item2","pg":[{"id":"165"}]},{"className":"item3","pg":[{"id":"165"}]},{"className":"item4","pg":[{"id":"165"}]},{"className":"item5","pg":[{"id":"165"}]},{"className":"item6","pg":[{"id":"165"}]},{"className":"item7","pg":[{"id":"165"}]},{"className":"item8","pg":[{"id":"165"}]}],
+		"pgChild":[{"className":"item1","pg":[{"id":"165"}]},{"className":"item2","pg":[{"id":"165"}]},{"className":"item3","pg":[{"id":"165"}]},{"className":"item4","pg":[{"id":"165"}]}],
 		"examples":[{"example":".body{ visibility:visible;}"}]
 	},
 	"166":{
@@ -1024,16 +1024,16 @@
 		"id":170,
 		"required":[{"prop":"display","value":"block"}],
 		"pg":[170],
-		"pgChild":[{"className":"item1","pg":[{"id":"130"}]},{"className":"item2","pg":[{"id":"130"}]},{"className":"item3","pg":[{"id":"130"}]},{"className":"item4","pg":[{"id":"130"}]},
-			{"className":"item5","pg":[{"id":"130"}]},{"className":"item6","pg":[{"id":"130"}]},{"className":"item7","pg":[{"id":"130"}]},{"className":"item8","pg":[{"id":"130"}]},{"className":"item9","pg":[{"id":"130"}]},{"className":"item10","pg":[{"id":"130"}]}],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
 		"examples":[{"example":".body{ column-count:3;}"}]
 	},
 	"171":{
 		"id":171,
 		"required":[{"prop":"display","value":"block"}],
 		"pg":[170,171,172,176],
-		"pgChild":[{"className":"item1 col"},{"className":"col item2"},{"className":"col item3"},{"className":"col item4"},
-			{"className":"col item5"},{"className":"col item6"}],
+		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
+			{"className":"item5"},{"className":"item6"}],
 		"examples":[{"example":".body{ column-fill:balance;}"}]
 	},
 	"172":{
@@ -1041,7 +1041,7 @@
 		"required":[{"prop":"display","value":"block"}],
 		"pg":[170,172],
 		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
-			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"}],
 		"examples":[{"example":".body{ column-gap:40px;}"}]
 	},
 	"173":{
@@ -1073,7 +1073,7 @@
 		"required":[{"prop":"display","value":"block"}],
 		"pg":[170,172,176],
 		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
-			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"}],
 		"examples":[{"example":".body{ column-rule:2px inset #ff0sff;}"}]
 	},
 	"177":{
@@ -1081,7 +1081,7 @@
 		"required":[{"prop":"display","value":"block"}],
 		"pg":[170,172,177,178,179],
 		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
-			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"}],
 		"examples":[{"example":".body{ column-rule-color:#ff0000;}"}]
 	},
 	"178":{
@@ -1089,7 +1089,7 @@
 		"required":[{"prop":"display","value":"block"}],
 		"pg":[170,172,177,178,179],
 		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
-			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"}],
 		"examples":[{"example":".body{ column-rule-style:groove;}"}]
 	},
 	"179":{
@@ -1097,7 +1097,7 @@
 		"required":[{"prop":"display","value":"block"}],
 		"pg":[170,172,177,178,179],
 		"pgChild":[{"className":"item1"},{"className":"item2"},{"className":"item3"},{"className":"item4"},
-			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"},{"className":"item10"}],
+			{"className":"item5"},{"className":"item6"},{"className":"item7"},{"className":"item8"},{"className":"item9"}],
 		"examples":[{"example":".body{ column-rule-width:thick;}"}]
 	},
 	"180":{

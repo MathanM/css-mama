@@ -37,6 +37,7 @@ p {
 .pg-box{
   &.blockLevel{
     display: block;
+    padding: 10px;
   }
   &.center{
     display: flex;
@@ -63,14 +64,103 @@ p {
   }
   .pg-child-para{
     padding: 15px;
+    &.center{
+      text-align: center;
+    }
+  }
+  .pg-child-para-5{
+    width: 60%;
+    height: 80%;
+    background: pink;
+    overflow: initial;
+    padding: 10px;
+    &.wide{
+      width: 90%;
+    }
   }
   .pg-child-img{
     width: 50%;
+  }
+  .pg-child-img-1{
+    width: 100%;
+  }
+  .pg-child-img-2{
+    width: 95%;
+    height: 90%;
   }
   .pg-child-1{
     width: 60%;
     height: 130px;
     background: white;
+  }
+  .pg-child-2{
+    width: 50%;
+    height: 50px;
+    background: red;
+    color: #fff;
+    transition: all 0.3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.active{
+      width: 80%;
+      height: 100px;
+      background: black;
+    }
+  }
+  .pg-child-3{
+    animation-name: cardFlip;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    width: 80px;
+    height: 100px;
+    border-radius: 3px;
+    background: red;
+    color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center
+  }
+  .pg-child-4{
+    border: 1px solid #00f;
+    background: linear-gradient(141deg, #9fb8ad 0, #1fc8db 51%, #2cb5e8 75%);
+    width: 50%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pg-child-5{
+    width: 100%;
+    padding: 15px;
+    overflow: scroll;
+    height: 100%;
+    p{
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .btn-group{
+      display: flex;
+      a{
+        width: 33.33%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid;
+        text-decoration: none;
+      }
+    }
+    .slide{
+      border: 1px solid;
+      background: pink;
+      min-height: 200px;
+      margin-top: 20px;
+      text-align: center;
+      padding: 20px;
+    }
   }
   .pg-child-table{
     width: 70%;
@@ -84,6 +174,69 @@ p {
       background: #90adcc;
       border: 1px solid;
     }
+  }
+  .pg-child-input{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #fff;
+    background: black;
+    color: #e4e4e4;
+    height: 50px;
+    outline: none;
+    font-size: 20px;
+  }
+  .pg-item{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-weight: 700;
+    margin-left: -35px;
+    font-size: 11px;
+    text-align: center;
+    color: #000;
+    &.item1{
+      background: #a854ff;
+      margin-top: -35px;
+    }
+    &.item2{
+      background: #54adff;
+      margin-top: 0
+    }
+    &.item3{
+      background: #4aca46;
+      margin-top: 35px
+    }
+    &.item4{
+      background: #fdff2e;
+      margin-top: 70px
+    }
+  }
+  .pg-item-1{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 11px;
+    text-align: center;
+    border: 1px solid #1ac7fb;
+    background: #a8e5f9;
+    color: #000;
+    &.type-2{
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+  .pg-item-2{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 11px;
+    text-align: center;
+    border: 1px solid #1ac7fb;
+    background: #a8e5f9;
+    color: #000;
   }
 }
 .browser-support {

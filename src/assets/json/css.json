@@ -4865,6 +4865,7 @@
     "prop": "animation",
     "class": "center",
     "style": "child",
+    "show": "pg-child",
     "desc": [
       "The animation property in CSS can be used to animate many other CSS properties "
     ],
@@ -4917,12 +4918,13 @@
     "prop": "animation-name",
     "class": "center",
     "style": "child",
+    "show": "pg-child",
     "desc": [
       "This property specifies a name for the @keyframes animation."
     ],
     "pg": [
       "pulse",
-      "movewithbg",
+      "moveWithBg",
       "none",
       "nudge"
     ],
@@ -4969,6 +4971,7 @@
     "type": "slider",
     "class": "center",
     "style": "child",
+    "show": "pg-child",
     "values": [
       {
         "name": "time",
@@ -4997,6 +5000,7 @@
     "prop": "animation-timing-function",
     "class": "center",
     "style": "child",
+    "show": "pg-child",
     "desc": [
       "This property specifies the speed curve of an animation",
       "The speed curve defines the TIME an animation uses to change from one set of CSS styles to another.",
@@ -5074,6 +5078,7 @@
     "prop": "animation-delay",
     "class": "center",
     "style": "child",
+    "show": "pg-child",
     "desc": [
       "This property specifies a delay for the start of an animation.",
       "The animation-delay value is defined in seconds (s) or milliseconds (ms)."
@@ -5120,6 +5125,7 @@
     "max": "10",
     "class": "center",
     "style": "child",
+    "show": "pg-child",
     "type": "slider",
     "values": [
       {
@@ -5153,6 +5159,7 @@
     "prop": "animation-direction",
     "class": "center",
     "style": "child",
+    "show": "pg-child",
     "desc": [
       "This property defines whether an animation should be played forwards, backwards or in alternate cycles."
     ],
@@ -5204,6 +5211,7 @@
     "prop": "animation-fill-mode",
     "class": "center",
     "style": "child",
+    "show": "pg-child",
     "desc": [
       "This property specifies a style for the element when the animation is not playing (before it starts, after it ends, or both)."
     ],
@@ -5255,6 +5263,7 @@
     "prop": "animation-play-state",
     "class": "center",
     "style": "child",
+    "show": "pg-child",
     "desc": [
       "This property specifies whether the animation is running or paused."
     ],
@@ -5317,6 +5326,7 @@
     ],
     "class": "center",
     "style": "child",
+    "show": "pg-child-2",
     "values": [
       {
         "name": "initial",
@@ -5353,6 +5363,7 @@
     "type": "select",
     "class": "center",
     "style": "child",
+    "show": "pg-child-2",
     "values": [
       {
         "name": "none",
@@ -5399,6 +5410,7 @@
     "type": "slider",
     "class": "center",
     "style": "child",
+    "show": "pg-child-2",
     "values": [
       {
         "name": "time",
@@ -5432,6 +5444,7 @@
     "type": "select",
     "class": "center",
     "style": "child",
+    "show": "pg-child-2",
     "pg": [
       "linear",
       "ease",
@@ -5512,6 +5525,7 @@
     "type": "slider",
     "class": "center",
     "style": "child",
+    "show": "pg-child-2",
     "values": [
       {
         "name": "time",
@@ -5550,6 +5564,7 @@
     "type": "select",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para-6",
     "values": [
       {
         "name": "visible",
@@ -5601,6 +5616,7 @@
     "type": "select",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para-6",
     "values": [
       {
         "name": "visible",
@@ -5652,6 +5668,7 @@
     "type": "select",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para-6",
     "values": [
       {
         "name": "visible",
@@ -5701,6 +5718,7 @@
     "type": "select",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para-6",
     "values": [
       {
         "name": "auto",
@@ -5742,6 +5760,7 @@
     "type": "select",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para-5",
     "values": [
       {
         "name": "normal",
@@ -5782,6 +5801,7 @@
     "type": "select",
     "class": "center",
     "style": "child",
+    "show": "pg-child-5",
     "values": [
       {
         "name": "auto",
@@ -5824,6 +5844,7 @@
     "type": "select",
     "class": "center",
     "style": "child",
+    "show": "pg-child-para",
     "values": [
       {
         "name": "none",
@@ -5868,6 +5889,7 @@
     "type": "select",
     "class": "center",
     "style": "child",
+    "show": "pg-child-2",
     "values": [
       {
         "name": "auto",
@@ -5901,6 +5923,7 @@
     "prop": "caret-color",
     "class": "center",
     "style": "child",
+    "show": "pg-child-input",
     "desc": [
       "The caret-color property specifies the color of the cursor (caret) in inputs, textareas, or any element that is editable."
     ],
@@ -5935,6 +5958,7 @@
     "prop": "cursor",
     "class": "center",
     "style": "child",
+    "show": "pg-child-img-2",
     "desc": [
       "The cursor property specifies the mouse cursor to be displayed when pointing over an element."
     ],
@@ -6150,8 +6174,10 @@
     "prop": "filter",
     "class": "center",
     "style": "child",
+    "show": "pg-child-img-1",
     "desc": [
-      "The filter property defines visual effects (like blur and saturation) to an element "
+      "The filter property defines visual effects (like blur and saturation) to an element ",
+      "The filter drop-shadow can be even used to add shadow effect for transparent png images"
     ],
     "pg": [
       "blur(5px)",
@@ -6240,6 +6266,7 @@
     "prop": "fill",
     "class": "center",
     "style": "child",
+    "show": "pg-child-svg",
     "desc": [
       "The fill property in CSS is for filling in the color of a SVG shape."
     ],
@@ -6282,6 +6309,7 @@
     "css": "3",
     "prop": "stroke",
     "class": "center",
+    "show": "pg-child-svg",
     "style": "child",
     "desc": [
       "The stroke property in CSS is for adding a border to SVG shapes."
@@ -6332,6 +6360,7 @@
     ],
     "class": "center",
     "style": "child",
+    "show": "pg-child-svg",
     "min": "0",
     "max": "15",
     "type": "slider",
@@ -6367,6 +6396,7 @@
     "prop": "stroke-linecap",
     "class": "center",
     "style": "child",
+    "show": "pg-child-svg",
     "desc": [
       "The stroke-linecap property in CSS is for setting the starting and ending points of a border on SVG shapes."
     ],
@@ -6413,6 +6443,7 @@
     "prop": "stroke-dasharray",
     "class": "center",
     "style": "child",
+    "show": "pg-child-svg",
     "desc": [
       "The stroke-dasharray property in CSS is for creating dashes in the stroke of SVG shapes. ",
       "The higher the number, the more space in between dashes in the stroke."
@@ -6463,6 +6494,7 @@
     "min": "0",
     "class": "center",
     "style": "child",
+    "show": "pg-child-svg",
     "max": "500",
     "type": "slider",
     "values": [
@@ -6497,7 +6529,7 @@
     "prop": "flex",
     "group": "flex",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-2",
     "desc": [
       "The flex property sets the flexible length on flexible items."
     ],
@@ -6549,7 +6581,7 @@
     "css": "3",
     "prop": "flex-grow",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-2",
     "desc": [
       "This property specifies how much the item will grow relative to the rest of the flexible items inside the same container."
     ],
@@ -6587,7 +6619,7 @@
     "css": "3",
     "prop": "flex-shrink",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-2",
     "desc": [
       "This property specifies how the item will shrink relative to the rest of the flexible items inside the same container."
     ],
@@ -6625,7 +6657,7 @@
     "css": "3",
     "prop": "flex-basis",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-2",
     "desc": [
       "This property specifies the initial length of a flexible item."
     ],
@@ -6668,7 +6700,7 @@
     "css": "3",
     "prop": "flex-flow",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-3",
     "desc": [
       "The flex-flow property is a sub-property of the Flexible Box Layout module."
     ],
@@ -6712,7 +6744,7 @@
     "css": "3",
     "prop": "flex-direction",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-3",
     "desc": [
       "The flex-direction property specifies the direction of the flexible items."
     ],
@@ -6764,7 +6796,7 @@
     "css": "3",
     "prop": "flex-wrap",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-3",
     "desc": [
       "The flex-wrap property specifies whether the flexible items should wrap or not."
     ],
@@ -6811,7 +6843,7 @@
     "css": "3",
     "prop": "align-items",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-3",
     "desc": [
       "The align-items property specifies the default alignment for items inside the flexible container.",
       "Use the align-self property of each item to override the align-items property."
@@ -6869,7 +6901,7 @@
     "css": "3",
     "prop": "align-self",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-3",
     "desc": [
       "The align-self property specifies the alignment for the selected item inside the flexible container."
     ],
@@ -6931,7 +6963,7 @@
     "css": "3",
     "prop": "align-content",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-3",
     "desc": [
       "The align-content property modifies the behavior of the flex-wrap property.",
       "It is similar to align-items, but instead of aligning flex items, it aligns flex lines."
@@ -6994,7 +7026,7 @@
     "css": "3",
     "prop": "justify-content",
     "class": "center",
-    "style": "child",
+    "show": "pg-nested-child-3",
     "desc": [
       "The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally)."
     ],
@@ -8112,6 +8144,7 @@
     "prop": "z-index",
     "group": "3d",
     "class": "center",
+    "show": "pg-nested-child",
     "desc": [
       "The z-index property specifies the stack order of an element.",
       "An element with greater stack order is always in front of an element with a lower stack order.",
@@ -8156,6 +8189,7 @@
     "style": "child",
     "prop": "backface-visibility",
     "class": "center",
+    "show": "pg-child-3",
     "desc": [
       "The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.",
       "The back face of an element is a mirror image of the front face being displayed."
@@ -8197,6 +8231,7 @@
     "prop": "user-select",
     "style": "child",
     "class": "center",
+    "show": "pg-child-para-4",
     "desc": [
       "The user-select property specifies whether the text of an element can be selected.",
       "In web browsers, if you double-click on some text it will be selected/highlighted. This property can be used to prevent this."
@@ -8239,6 +8274,8 @@
     "id": 165,
     "css": "2",
     "prop": "visibility",
+    "class": "center",
+    "show": "pg-nested-child",
     "desc": [
       "The visibility property specifies whether or not an element is visible.",
       "Hidden elements take up space on the page."
@@ -8286,6 +8323,7 @@
     "prop": "resize",
     "style": "child",
     "class": "center",
+    "show": "pg-child-4",
     "desc": [
       "The resize property defines if (and how) an element is resizable by the user.",
       "The resize property does not apply on elements where overflow is visible"
@@ -8338,6 +8376,7 @@
     "prop": "hyphens",
     "style": "child",
     "class": "center",
+    "show": "pg-child-para",
     "extension": true,
     "desc": [
       "The hyphens property defines whether hyphenation is allowed to create more soft wrap opportunities within a line of text."
@@ -8385,13 +8424,15 @@
     "prop": "quotes",
     "style": "child",
     "class": "center",
+    "show": "pg-child-para-3",
     "desc": [
       "The quotes property sets the type of quotation marks for quotations."
     ],
     "pg": [
       "\"„\" \"“\" \"‚\" \"‘\"",
       "\"«\" \"»\" \"‹\" \"›\"",
-      "\"'\" \"'\""
+      "\"'\" \"'\"",
+      "none"
     ],
     "type": "select",
     "values": [
@@ -8426,6 +8467,7 @@
     "prop": "zoom",
     "style": "child",
     "class": "center",
+    "show": "pg-child-3",
     "desc": [
       "The zoom property in CSS allows you to scale your content"
     ],
@@ -8462,6 +8504,7 @@
     "group": "col",
     "class": "blockLevel",
     "css": "3",
+    "show": "pg-nested-child-1",
     "prop": "column-count",
     "desc": [
       "The column-count property specifies the number of columns an element should be divided into"
@@ -8505,6 +8548,7 @@
     "class": "blockLevel",
     "css": "3",
     "prop": "column-fill",
+    "show": "pg-nested-child-2",
     "desc": [
       "The column-fill property specifies how to fill columns"
     ],
@@ -8546,6 +8590,7 @@
     "class": "blockLevel",
     "css": "3",
     "prop": "column-gap",
+    "show": "pg-nested-child-2",
     "desc": [
       "The column-gap property specifies the gap between the columns."
     ],
@@ -8588,6 +8633,7 @@
     "class": "blockLevel",
     "css": "3",
     "prop": "column-span",
+    "show": "pg-nested-child-2",
     "desc": [
       "The column-span property specifies how many columns an element should span across."
     ],
@@ -8628,6 +8674,7 @@
     "group": "col",
     "class": "blockLevel",
     "css": "3",
+    "show": "pg-nested-child-2",
     "prop": "column-width",
     "desc": [
       "The column-width property specifies the column width.",
@@ -8671,6 +8718,7 @@
     "css": "3",
     "prop": "columns",
     "class": "blockLevel",
+    "show": "pg-nested-child-1",
     "group": "col",
     "shortHand": [
       170,
@@ -8712,6 +8760,7 @@
     "css": "3",
     "prop": "column-rule",
     "class": "blockLevel",
+    "show": "pg-nested-child-2",
     "group": "col",
     "shortHand": [
       176,
@@ -8756,6 +8805,7 @@
     "id": 177,
     "css": "3",
     "prop": "column-rule-color",
+    "show": "pg-nested-child-2",
     "class": "blockLevel",
     "group": "col",
     "desc": [
@@ -8795,6 +8845,7 @@
     "id": 178,
     "css": "3",
     "prop": "column-rule-style",
+    "show": "pg-nested-child-2",
     "class": "blockLevel",
     "group": "col",
     "desc": [
@@ -8876,6 +8927,7 @@
     "id": 179,
     "css": "3",
     "prop": "column-rule-width",
+    "show": "pg-nested-child-2",
     "class": "blockLevel",
     "group": "col",
     "desc": [
@@ -8964,6 +9016,7 @@
     "prop": "clip",
     "class": "center",
     "style": "child",
+    "show": "pg-child-img",
     "desc": [
       "The clip property lets you specify a rectangle to clip an absolutely positioned element",
       "This property does not work if overflow is visible."
@@ -9006,6 +9059,7 @@
     "prop": "clip-path",
     "class": "center",
     "style": "child",
+    "show": "pg-child-img",
     "desc": [
       "The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area."
     ],
@@ -9049,14 +9103,17 @@
     "prop": "counter-increment",
     "type": "select",
     "group": "count",
+    "style": "child",
+    "class": "center",
+    "show": "pg-child-list-1",
     "desc": [
       "It is used to increase or decrease two or more counters"
     ],
     "pg": [
-      "counter1 1",
-      "counter1 2",
-      "counter1 5",
-      "counter1 -3"
+      "my-counter 1",
+      "my-counter 2",
+      "my-counter 5",
+      "my-counter -3"
     ],
     "values": [
       {
@@ -9092,10 +9149,10 @@
     "type": "select",
     "group": "count",
     "pg": [
-      "counter1 1",
-      "counter1 0",
-      "counter1 5",
-      "counter1 -2"
+      "my-counter 1",
+      "my-counter 0",
+      "my-counter 5",
+      "my-counter -2"
     ],
     "desc": [
       "It is used to create or rest two or more counters"

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CSSObject, CSSProp, CSSPropExample, CSSValue} from '../models/css.model';
+import {CSSChildExample, CSSObject, CSSProp, CSSPropExample, CSSValue} from '../models/css.model';
 import {UtilityService} from '../utility.service';
 
 @Component({
@@ -14,11 +14,13 @@ export class PropertyDetailPage implements OnInit {
   @Input() selector: boolean;
   shortHandProp: any[] = [];
   propValue: CSSValue[] = [];
-  selectedId: number;
+  selectedId: number|string;
+  selectedChild: CSSChildExample;
   style = {};
   parentClass = 'body';
   childClass = 'child';
   selectedUnit = '';
+  flag = false;
   constructor(public util: UtilityService) { }
 
   ngOnInit() {
@@ -59,13 +61,46 @@ export class PropertyDetailPage implements OnInit {
       this.propValue = [...this.propValue, ...this.property.values];
     }
   }
+  /*
+  * else if (this.exmData[this.i].pgChild) {
+    if (this.selectedId = this.exmData[this.i].pgChild[0].pg[0].id, this.exmData[this.i].pgChild[0].pg.forEach(function(n) {
+       l.i == n.id && (l.selectedId = n.id, l.selectedValue = n.value ? n.value : l.cssData[l.selectedId].pg[0])
+        }), "slider" == this.cssData[this.selectedId].type && this.selectedValue) {
+       var n = new RegExp(/([^0-9.-].*)/g).exec(this.selectedValue);
+        this.unit = n ? n[0] : ""
+     }
+      this.childFlag = !0
+   }
+  * */
   private playgroundStyleBuilder() {
+    this.selectedId = this.property.id;
     if (this.exampleData.pg){
-      this.selectedId = this.property.id;
       this.exampleData.pg.forEach((prop) => {
         this.style[this.cssData[prop].prop] = this.cssData[prop].pg[0];
         if (this.cssData[prop].type === 'slider'){
           this.getLengthUnit(this.cssData[prop].pg[0]);
+        }
+      });
+    }
+    if (this.exampleData.pgChild){
+      if (this.exampleData.pgChild[0].pg){
+        this.exampleData.pgChild[0].pg.forEach((prop) => {
+          if (prop.id === this.property.id + ''){
+            this.selectedChild = this.exampleData.pgChild[0];
+          }
+        });
+      }
+      this.exampleData.pgChild.forEach((child) => {
+        if (child.pg){
+          child.pg.forEach((prop) => {
+            if (!this.style[child.className]){
+              this.style[child.className] = {};
+            }
+            this.style[child.className][this.cssData[prop.id].prop] = prop.value ? prop.value : this.cssData[prop.id].pg[0];
+            if (prop.id === (this.property.id + '') && this.cssData[prop.id].type === 'slider'){
+              this.getLengthUnit(this.cssData[prop.id].pg[0]);
+            }
+          });
         }
       });
     }
@@ -83,11 +118,22 @@ export class PropertyDetailPage implements OnInit {
     console.log(this.style);
   }
   onSliderChange(){
-    this.style[this.cssData[this.selectedId].prop] += this.selectedUnit;
+    if (this.selectedChild){
+      this.style[this.selectedChild.className][this.cssData[this.selectedId].prop] += this.selectedUnit;
+    }else{
+      this.style[this.cssData[this.selectedId].prop] += this.selectedUnit;
+    }
   }
-  onPropertyClick(i){
+  onPropertyClick(i, flag?){
+    if (flag){
+      this.selectedChild = undefined;
+    }
     this.selectedId = this.cssData[i].id;
-    this.getLengthUnit(this.style[this.cssData[i].prop]);
+    if (this.selectedChild){
+      this.getLengthUnit(this.style[this.selectedChild.className][this.cssData[i].prop]);
+    }else{
+      this.getLengthUnit(this.style[this.cssData[i].prop]);
+    }
   }
   generateHTML(code: string): string{
     let out = code;
@@ -126,5 +172,11 @@ export class PropertyDetailPage implements OnInit {
   }
   generateCSS(code: string): string{
     return this.util.generateCSS(code);
+  }
+  onClick(): void{
+    this.flag = !this.flag;
+  }
+  onChildClick(child: any): void{
+    this.selectedChild = child;
   }
 }

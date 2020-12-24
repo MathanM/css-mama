@@ -31,7 +31,7 @@
 </ion-content>
 <ion-content *ngIf="searchFlag">
   <ion-list *ngIf="searchData.length > 0">
-    <p style="padding: 15px; margin: 0;">
+    <p style="padding: 15px; margin: 0;" *ngIf="sortValue || filterValue">
       <ion-chip outline color="dark" *ngIf="sortValue && sortValue === 'asce'">
         <ion-icon name="trending-up-outline"></ion-icon>
         <ion-label>Ascending</ion-label>

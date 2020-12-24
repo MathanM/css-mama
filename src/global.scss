@@ -142,3 +142,39 @@ body.dark{
     }
   }
 }
+@keyframes cardFlip {
+  from {
+    transform: rotateY(0)
+  }
+  to {
+    transform: rotateY(360deg)
+  }
+}
+@keyframes pulse {
+  from {
+    background-color: #001f3f
+  }
+  to {
+    background-color: #ff4136
+  }
+}
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0)
+  }
+  50% {
+    transform: translate(150px, 0)
+  }
+  80% {
+    transform: translate(-150px, 0)
+  }
+}
+@keyframes moveWithBg {
+  from {
+    top: 0
+  }
+  to {
+    top: 50px;
+    background-color: #00f
+  }
+}

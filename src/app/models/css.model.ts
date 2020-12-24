@@ -63,8 +63,19 @@ export interface CSSPropExample {
     id: number;
     examples: CSSExampleValue[];
     pg: number[];
+    pgChild?: CSSChildExample[];
     required?: CSSRequiredProp[];
     comment?: string;
+}
+export interface CSSChildExample{
+    className: string;
+    pg: CSSChildProp[];
+    required?: CSSRequiredProp[];
+    comment?: string;
+}
+export interface CSSChildProp{
+    id: string;
+    value?: string;
 }
 export interface CSSRequiredProp{
     prop: string;

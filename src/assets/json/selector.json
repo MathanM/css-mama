@@ -5,13 +5,13 @@
 		"prop":".class",
 		"desc":["To select elements with a specific class, write a period (.) character, followed by the name of the class."],
 		"browser":{"c":"Supported","i":"Supported","f":"Supported","s":"Supported","o":"Supported"},
-		"examples":[{"example":".container { color: orange;}","html":"<p class='container'>Awesome Styles</p>"},{"example":".item.specialItem { background: red;}","html":"<li class='item specialItem'></li>"}]
+		"examples":[{"example":".container{ color:orange;}","html":"<p class='container'>Awesome Styles</p>"},{"example":".item.specialItem{ background:red;}","html":"<li class='item specialItem'></li>"}]
 	},
 	"2":{
 		"id":2,
 		"css":"1",
 		"prop":"#id",
-		"examples":[{"example":"#menu { border: 2px solid grey;}","html":"<nav id='menu'>Click Nav</nav>"}],
+		"examples":[{"example":"#menu{ border:2px solid grey;}","html":"<nav id='menu'>Click Nav</nav>"}],
 		"desc":["To select elements with a specific id, write a hash (#) character, followed by the name of the id."],
 		"browser":{"c":"Supported","i":"Supported","f":"Supported","s":"Supported","o":"Supported"}
 	},
@@ -19,7 +19,7 @@
 		"id":3,
 		"css":"1",
 		"prop":"element",
-		"examples":[{"example":"ul { padding-left: 3em;}","html":"<ul>\n\t\t<li>List Item 1</li>\n\t\t<li>List Item 2</li>\n</ul>"}],
+		"examples":[{"example":"ul{ padding-left:3em;}","html":"<ul>\n\t\t<li>List Item 1</li>\n\t\t<li>List Item 2</li>\n</ul>"}],
 		"desc":["The element selector selects all elements with the specified tag name"],
 		"browser":{"c":"Supported","i":"Supported","f":"Supported","s":"Supported","o":"Supported"}
 	},
@@ -28,7 +28,7 @@
 		"css":"1",
 		"prop":"selector, selector",
 		"desc":["To style several elements with the same style, separate each element name with a comma."],
-		"examples":[{"example":"#menu, ul { color: brown;}","html":"<nav id='menu'>Click Nav</nav>\n<ul>\n\t\t<li>List Item 1</li>\n\t\t<li>List Item 2</li>\n</ul>"}],
+		"examples":[{"example":"#menu, ul{ color:brown;}","html":"<nav id='menu'>Click Nav</nav>\n<ul>\n\t\t<li>List Item 1</li>\n\t\t<li>List Item 2</li>\n</ul>"}],
 		"browser":{"c":"Supported","i":"Supported","f":"Supported","s":"Supported","o":"Supported"}
 	},
 	"5":{
@@ -36,7 +36,7 @@
 		"css":"1",
 		"prop":"selector selector",
 		"desc":["To select elements inside elements","A descendant selector in CSS is any selector with white space between two selectors without a combinator"],
-		"examples":[{"example":".lists li{ font-size: 18px;}","html":"<ul class='lists'>\n\t\t<li>List Item 1</li>\n\t\t<li>List Item 2</li>\n</ul>"}],
+		"examples":[{"example":".lists li{ font-size:18px;}","html":"<ul class='lists'>\n\t\t<li>List Item 1</li>\n\t\t<li>List Item 2</li>\n</ul>"}],
 		"browser":{"c":"Supported","i":"Supported","f":"Supported","s":"Supported","o":"Supported"}
 
 	},
@@ -45,14 +45,14 @@
 		"css":"2",
 		"prop":"selector > selector",
 		"desc":["Elements that are directly a child of the specified parent, are selected.","A child combinator in CSS is the 'greater than' symbol","It is called as direct descendent selector/child selector"],
-		"examples":[{"example":"ul > li{ color: red;}","html":"<ul class='lists'>\n\t\t<li>Color red</li>\n\t\t<li>Color red</li>\n\t\t<ol>\n\t\t\t\t<li>Color will not be red</li>\n\t\t</ol>\n</ul>"}],
+		"examples":[{"example":"ul > li{ color:red;}","html":"<ul class='lists'>\n\t\t<li>Color red</li>\n\t\t<li>Color red</li>\n\t\t<ol>\n\t\t\t\t<li>Color will not be red</li>\n\t\t</ol>\n</ul>"}],
 		"browser":{"c":"Supported","i":"7.0","f":"Supported","s":"Supported","o":"Supported"}
 	},
 	"7":{
 		"id":7,
 		"css":"2",
 		"prop":"selector + selector",
-		"examples":[{"example":".inputBox + .inputLabel{ font-weight: bold;}","html":"<label class='inputLabel'>Not Selected</label>\n<input class='inputBox' type='text'>\n<label class='inputLabel'>Selected</label>\n<label class='inputLabel'>Not Selected</label>"}],
+		"examples":[{"example":".inputBox + .inputLabel{ font-weight:bold;}","html":"<label class='inputLabel'>Not Selected</label>\n<input class='inputBox' type='text'>\n<label class='inputLabel'>Selected</label>\n<label class='inputLabel'>Not Selected</label>"}],
 		"desc":["Elements that is placed immediately after the first specified element will be selected.","The plus sign (+) is the adjacent sibling combinator"],
 		"browser":{"c":"Supported","i":"7.0","f":"Supported","s":"Supported","o":"Supported"}
 	},
@@ -61,7 +61,7 @@
 		"css":"3",
 		"prop":"selector1 ~ selector2",
 		"desc":["This selector matches occurrences of element2 that are preceded by element1 at the same hierarchy level","This is general sibling combinator (~) in CSS"],
-		"examples":[{"example":".inputBox ~ .inputLabel{ font-weight: bold;}","html":"<label class='inputLabel'>Not Selected</label>\n<input class='inputBox' type='text'>\n<label class='inputLabel'>Selected</label>\n<label class='inputLabel'>Selected</label>"}],
+		"examples":[{"example":".inputBox ~ .inputLabel{ font-weight:bold;}","html":"<label class='inputLabel'>Not Selected</label>\n<input class='inputBox' type='text'>\n<label class='inputLabel'>Selected</label>\n<label class='inputLabel'>Selected</label>"}],
 		"browser":{"c":"4.0","i":"7.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"9":{
@@ -77,7 +77,7 @@
 		"css":"2",
 		"prop":"[attr]",
 		"desc":["This selector selects all the elements with the specified attribute"],
-		"examples":[{"example":"input[required]{ display: block; color: violet;}","html":"<input type='text' value='Not Selected'>\n<input required type='text' value='Selected'>"}],
+		"examples":[{"example":"input[required]{ display:block; color:violet;}","html":"<input type='text' value='Not Selected'>\n<input required type='text' value='Selected'>"}],
 		"browser":{"c":"4.0","i":"7.0","f":"2.0","s":"3.1","o":"9.6"}
 	},
 	"11":{
@@ -85,7 +85,7 @@
 		"css":"2",
 		"prop":"[attr=value]",
 		"desc":["This selector is used to select elements with the specified attribute and exact value"],
-		"examples":[{"example":"input[type='text']{ border: 2px solid white; color: green;}","html":"<input type='number' value='100'>\n<input type='text' value='Selected'>"}],
+		"examples":[{"example":"input[type='text']{ border:2px solid white; color:green;}","html":"<input type='number' value='100'>\n<input type='text' value='Selected'>"}],
 		"browser":{"c":"4.0","i":"7.0","f":"2.0","s":"3.1","o":"9.6"}
 	},
 	"12":{
@@ -94,7 +94,7 @@
 		"class":"center row",
 		"prop":"[attr~=value]",
 		"desc":["This selector is used to select elements with an attribute value containing a specified word"],
-		"examples":[{"example":"img[alt~=flower]{ border: 5px solid skyblue;}","html":"<img alt='flower leaf' src='assets/imgs/leaf.png' title='Selected'>\n<img alt='flowering tree' src='assets/imgs/tree.png' title='Not Selected'>"}],
+		"examples":[{"example":"img[alt~=flower]{ border:5px solid skyblue;}","html":"<img alt='flower leaf' src='assets/imgs/leaf.png' title='Selected'>\n<img alt='flowering tree' src='assets/imgs/tree.png' title='Not Selected'>"}],
 		"browser":{"c":"4.0","i":"7.0","f":"2.0","s":"3.1","o":"9.6"}
 	},
 	"13":{
@@ -102,7 +102,7 @@
 		"css":"2",
 		"prop":"[attr|=value]",
 		"desc":["It will select the Elements with the attribute value that starts with the specified value in a dash-separated list"],
-		"examples":[{"example":"[lang|=en]{ outline: 2px solid blue;}","html":"<p lang='en'>Selected</p>\n<p lang='enUs'>Not Selected</p>\n<p lang='en-us'>Selected</p>"}],
+		"examples":[{"example":"[lang|=en]{ outline:2px solid blue;}","html":"<p lang='en'>Selected</p>\n<p lang='enUs'>Not Selected</p>\n<p lang='en-us'>Selected</p>"}],
 		"browser":{"c":"4.0","i":"7.0","f":"2.0","s":"3.1","o":"9.6"}
 	},
 	"14":{
@@ -110,7 +110,7 @@
 		"css":"2",
 		"prop":"[attr^=value]",
 		"desc":["This selector matches every element whose attribute value begins with a specified value"],
-		"examples":[{"example":"[lang^=en]{ outline: 2px solid blue;}","html":"<p lang='en'>Selected</p>\n<p lang='enUs'>Selected</p>\n<p lang='us-en'>Not Selected</p>"}],
+		"examples":[{"example":"[lang^=en]{ outline:2px solid blue;}","html":"<p lang='en'>Selected</p>\n<p lang='enUs'>Selected</p>\n<p lang='us-en'>Not Selected</p>"}],
 		"browser":{"c":"4.0","i":"7.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"15":{
@@ -118,7 +118,7 @@
 		"css":"2",
 		"prop":"[attr$=value]",
 		"desc":["This selector matches every element whose attribute value ends with a specified value"],
-		"examples":[{"example":"[lang$=en]{ outline: 2px solid blue;}","html":"<p lang='en'>Selected</p>\n<p lang='hidden'>Selected</p>\n<p lang='en-us'>Not Selected</p>"}],
+		"examples":[{"example":"[lang$=en]{ outline:2px solid blue;}","html":"<p lang='en'>Selected</p>\n<p lang='hidden'>Selected</p>\n<p lang='en-us'>Not Selected</p>"}],
 		"browser":{"c":"4.0","i":"7.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"16":{
@@ -126,14 +126,14 @@
 		"css":"3",
 		"prop":"[attr*=value]",
 		"desc":["This selector matches every element whose attribute value containing a specified value"],
-		"examples":[{"example":"[lang*=en]{ outline: 2px solid blue;}","html":"<p lang='en-us'>Selected</p>\n<p lang='hidden'>Selected</p>\n<p lang='us-en'>Selected</p>"}],
+		"examples":[{"example":"[lang*=en]{ outline:2px solid blue;}","html":"<p lang='en-us'>Selected</p>\n<p lang='hidden'>Selected</p>\n<p lang='us-en'>Selected</p>"}],
 		"browser":{"c":"4.0","i":"7.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"17":{
 		"id":17,
 		"css":"1",
 		"prop":":active",
-		"examples":[{"example":"a.siteLink:active{ color: #cc33ff;}","html":"<a class='siteLink' href='#header'>Go to Top of the page</a>","desc":"It works on all the elements"}],
+		"examples":[{"example":"a.siteLink:active{ color:#cc33ff;}","html":"<a class='siteLink' href='#header'>Go to Top of the page</a>","desc":"It works on all the elements"}],
 		"desc":["The :active selector is used to select and style the active element","A element becomes active when you click on it.","It's usually only seen for a split second, and provides visual feedback that the element was indeed clicked"],
 		"browser":{"c":"4.0","i":"7.0","f":"2.0","s":"3.1","o":"9.6"}
 	},
@@ -141,7 +141,7 @@
 		"id":18,
 		"css":"1",
 		"prop":":link",
-		"examples":[{"example":"a:link{ color: aquamarine;}","html":"<a href='#header1'>Selected</a>\n<a href>Selected</a>\n<a href=''>Selected</a>\n<a name='section'>Not Selected</a>","desc":"It only works on &lt;a&gt; elements with the href attribute."}],
+		"examples":[{"example":"a:link{ color:aquamarine;}","html":"<a href='#header1'>Selected</a>\n<a href>Selected</a>\n<a href=''>Selected</a>\n<a name='section'>Not Selected</a>","desc":"It only works on &lt;a&gt; elements with the href attribute."}],
 		"desc":["The :link selector is used to target all the unvisited anchor <a> elements on a page"],
 		"browser":{"c":"4.0","i":"7.0","f":"2.0","s":"3.1","o":"9.6"}
 	},
@@ -159,7 +159,7 @@
 		"prop":":hover",
 		"browser":{"c":"4.0","i":"7.0","f":"2.0","s":"3.1","o":"9.6"},
 		"desc":["It is used to select elements, when the mouse/cursor is over them."],
-		"examples":[{"example":"#container:hover{ border-radius: 10px; border: 1px solid black;}","html":"<div id='container'>\n\t\t<p>CSS Selectors</p>\n</div>","desc":"It works on all the elements"}]
+		"examples":[{"example":"#container:hover{ border-radius:10px; border:1px solid black;}","html":"<div id='container'>\n\t\t<p>CSS Selectors</p>\n</div>","desc":"It works on all the elements"}]
 	},
 	"21":{
 		"id":21,
@@ -167,7 +167,7 @@
 		"class":"row",
 		"prop":":checked",
 		"desc":["It is used to select input elements of type checkbox and radio, only when they are in selected state."],
-		"examples":[{"example":"input:checked{ box-shadow:0 0 3px 1px blue;}","html":"<input type='checkbox' checked>Check Me"},{"example":"option:checked{ background: green; color: white;}","html":"<select>\n\t\t<option>Item 1</option>\n\t\t<option>Item 2</option>\n\t\t<option>Item 3</option>\n\t\t<option>Item 4</option>\n</select>","desc":"It also affect &lt;option&gt; tag"}],
+		"examples":[{"example":"input:checked{ box-shadow:0 0 3px 1px blue;}","html":"<input type='checkbox' checked>Check Me"},{"example":"option:checked{ background:green; color:white;}","html":"<select>\n\t\t<option>Item 1</option>\n\t\t<option>Item 2</option>\n\t\t<option>Item 3</option>\n\t\t<option>Item 4</option>\n</select>","desc":"It also affect &lt;option&gt; tag"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"22":{
@@ -183,7 +183,7 @@
 		"id":23,
 		"css":"3",
 		"prop":":disabled",
-		"examples":[{"example":"input[type='text']:disabled{ color: grey; border: 2px dotted grey;}","html":"<input type='text' disabled value='Selected'>\n<input type='text' disabled='disabled' value='Selected'>\n<input type='text' disabled='' value='Selected'>"}],
+		"examples":[{"example":"input[type='text']:disabled{ color:grey; border:2px dotted grey;}","html":"<input type='text' disabled value='Selected'>\n<input type='text' disabled='disabled' value='Selected'>\n<input type='text' disabled='' value='Selected'>"}],
 		"desc":["This selector target the elements which has disabled attribute.","It affects <button>, <input>, <textarea>, <optgroup>, <option> and <fieldset> tags"],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
@@ -193,14 +193,14 @@
 		"class":"row",
 		"prop":":enabled",
 		"desc":["This selector targets the elements which are not disabled","It affects <input>, <select>, <textarea>, <button>, <optgroup>, <option> and <fieldset>"],
-		"examples":[{"example":"input:enabled + label{ font-style: italic; color: dodgerblue;}","html":"<input type='checkbox' id='genderM'>\n<label for='genderM'>Male</label>\n<input type='checkbox' id='genderF' disabled>\n<label for='genderF'>Female</label"}],
+		"examples":[{"example":"input:enabled + label{ font-style:italic; color:dodgerblue;}","html":"<input type='checkbox' id='genderM'>\n<label for='genderM'>Male</label>\n<input type='checkbox' id='genderF' disabled>\n<label for='genderF'>Female</label"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"25":{
 		"id":25,
 		"css":"2",
 		"prop":":focus",
-		"examples":[{"example":"div:focus{ border: 2px solid black;}","html":"<div contenteditable>Selected</div>\n<div tabindex='3'>Selected</div>\n<div>Not Selected</div>"}],
+		"examples":[{"example":"div:focus{ border:2px solid black;}","html":"<div contenteditable>Selected</div>\n<div tabindex='3'>Selected</div>\n<div>Not Selected</div>"}],
 		"browser":{"c":"4.0","i":"8.0","f":"2.0","s":"3.1","o":"9.6"},
 		"desc":["The :focus pseudo class in CSS is used for styling an element that is currently targeted by the keyboard event or focused by mouse.","It is affected by <a>, <button>, <input>, and <textareas> tags and Elements with contenteditable and tabindex attribute"]
 	},
@@ -208,7 +208,7 @@
 		"id":26,
 		"css":"3",
 		"prop":":optional",
-		"examples":[{"example":"input:optional{ color: green;}","html":"<input type='text' value='Selected'>\n<input type='text' value='Not Selected' required>"}],
+		"examples":[{"example":"input:optional{ color:green;}","html":"<input type='text' value='Selected'>\n<input type='text' value='Not Selected' required>"}],
 		"desc":["This selector target the input elements which are not set with the required attribute","It affects <input>, <select>, <textarea> tags"],
 		"browser":{"c":"10.0","i":"10.0","f":"4.0","s":"5.0","o":"10.0"}
 	},
@@ -216,7 +216,7 @@
 		"id":27,
 		"css":"3",
 		"prop":":required",
-		"examples":[{"example":"#name:required{ font-weight: bold; color: red;}","html":"<input id='name' type='text' value='red' required>"}],
+		"examples":[{"example":"#name:required{ font-weight:bold; color:red;}","html":"<input id='name' type='text' value='red' required>"}],
 		"desc":["This selector targets the input elements which has required attribute.","It affects <input>, <select>, <textarea> tags"],
 		"browser":{"c":"10.0","i":"10.0","f":"4.0","s":"5.0","o":"10.0"}
 	},
@@ -224,7 +224,7 @@
 		"id":28,
 		"css":"3",
 		"prop":":invalid",
-		"examples":[{"example":"input:invalid{ color: red;}","html":"<input type='text' pattern='^[a-z].*' value='123Start' placeholder='only lowercase letters'>"}],
+		"examples":[{"example":"input:invalid{ color:red;}","html":"<input type='text' pattern='^[a-z].*' value='123Start' placeholder='only lowercase letters'>"}],
 		"desc":["The :invalid selector allows you to select input elements that do not contain valid content.","The input elements with min, max, required, pattern attributes, email field without a legal email and number field with non numeric values will be affected."],
 		"browser":{"c":"10.0","i":"10.0","f":"4.0","s":"5.0","o":"10.0"}
 	},
@@ -232,7 +232,7 @@
 		"id":29,
 		"css":"3",
 		"prop":":valid",
-		"examples":[{"example":"input:focus:valid{ color: green;}","html":"<input type='number' min='0' max='100' placeholder='number between 0 to 100'>"}],
+		"examples":[{"example":"input:focus:valid{ color:green;}","html":"<input type='number' min='0' max='100' placeholder='number between 0 to 100'>"}],
 		"desc":["The :valid selector allows you to select input elements that contain valid content.","It affects input elements"],
 		"browser":{"c":"10.0","i":"10.0","f":"4.0","s":"5.0","o":"10.0"}
 	},
@@ -240,7 +240,7 @@
 		"id":30,
 		"css":"3",
 		"prop":":in-range",
-		"examples":[{"example":"input:in-range{ color: green;}","html":"<input type='number' min='0' max='100' value='50'>"}],
+		"examples":[{"example":"input:in-range{ color:green;}","html":"<input type='number' min='0' max='100' value='50'>"}],
 		"desc":["It selects the input elements whose value is within the range specified by min and max attribute"],
 		"browser":{"c":"53.0","i":"13.0","f":"50.0","s":"10.1","o":"40.0"}
 	},
@@ -248,7 +248,7 @@
 		"id":31,
 		"css":"3",
 		"prop":":out-of-range",
-		"examples":[{"example":"input:out-of-range{ color: red;}","html":"<input type='number' min='0' max='100' value='220'>"}],
+		"examples":[{"example":"input:out-of-range{ color:red;}","html":"<input type='number' min='0' max='100' value='220'>"}],
 		"desc":["It selects the input elements whose value is outside the specified range.","It is affected by min and max attribute of the input elements."],
 		"browser":{"c":"53.0","i":"13.0","f":"50.0","s":"10.1","o":"40.0"}
 	},
@@ -256,7 +256,7 @@
 		"id":32,
 		"css":"3",
 		"prop":":read-only",
-		"examples":[{"example":".body *:read-only{ cursor: not-allowed; background: red;}","html":"<input type='text' value='Read Write'>\n<input type='number' value='120' readonly >\n<div contenteditable>Read Write</div>\n<input type='text' value='Read Write' disabled>\n<div>Read Only</div>"}],
+		"examples":[{"example":".body *:read-only{ cursor:not-allowed; background:red;}","html":"<input type='text' value='Read Write'>\n<input type='number' value='120' readonly >\n<div contenteditable>Read Write</div>\n<input type='text' value='Read Write' disabled>\n<div>Read Only</div>"}],
 		"desc":["It selects input elements with readonly attribute and all other elements which are not affected by contenteditable and disabled attribute"],
 		"browser":{"c":"36.0","i":"13.0","f":"3.0 -moz-","s":"9.0","o":"23.0"}
 	},
@@ -264,7 +264,7 @@
 		"id":33,
 		"css":"3",
 		"prop":":read-write",
-		"examples":[{"example":".body *:read-write{ cursor: text; background: green;}","html":"<input type='text' value='Read Write'>\n<input type='number' value='120' readonly >\n<div contenteditable>Read Write</div>\n<input type='text' value='Read Write' disabled>\n<div>Read Only</div>"}],
+		"examples":[{"example":".body *:read-write{ cursor:text; background:green;}","html":"<input type='text' value='Read Write'>\n<input type='number' value='120' readonly >\n<div contenteditable>Read Write</div>\n<input type='text' value='Read Write' disabled>\n<div>Read Only</div>"}],
 		"desc":["It selects input elements with disabled attribute and without readonly attribute","It also affects contenteditable elements"],
 		"browser":{"c":"36.0","i":"13.0","f":"3.0 -moz-","s":"9.0","o":"23.0"}
 	},
@@ -280,7 +280,7 @@
 		"id":35,
 		"css":"3",
 		"prop":"::placeholder",
-		"examples":[{"example":".textBox::placeholder{ color: orange;}","html":"<input class='textBox' type='text' placeholder='Search'>"}],
+		"examples":[{"example":".textBox::placeholder{ color:orange;}","html":"<input class='textBox' type='text' placeholder='Search'>"}],
 		"desc":["This selector is used to style the placeholder text.","It affects input elements with placeholder attribute"],
 		"browser":{"c":"57.0","i":"10.0 -ms-","f":"51.0","s":"10.1","o":"44.0"}
 	},
@@ -289,7 +289,7 @@
 		"css":"3",
 		"prop":":placeholder-shown",
 		"desc":["The :placeholder-shown is for selecting the input itself when it's placeholder text is being shown"],
-		"examples":[{"example":"input:placeholder-shown{ border-radius: 7px;}","html":"<input type='text' placeholder='Search'>"}],
+		"examples":[{"example":"input:placeholder-shown{ border-radius:7px;}","html":"<input type='text' placeholder='Search'>"}],
 		"browser":{"c":"57.0","i":"11.0 -ms-","f":"51.0","s":"10.1","o":"44.0"}
 	},
 	"37":{
@@ -297,7 +297,7 @@
 		"css":"2",
 		"prop":":first-child",
 		"desc":["It selects only the first child of the parent."],
-		"examples":[{"example":"p:first-child{ font-weight: bold;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"}],
+		"examples":[{"example":"p:first-child{ font-weight:bold;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"}],
 		"browser":{"c":"4.0","i":"7.0","f":"3.0","s":"3.1","o":"9.6"}
 	},
 	"38":{
@@ -305,7 +305,7 @@
 		"css":"3",
 		"prop":":last-child",
 		"desc":["It selects only the last child of the parent."],
-		"examples":[{"example":"p:last-child{ font-weight: bold;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"}],
+		"examples":[{"example":"p:last-child{ font-weight:bold;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"39":{
@@ -313,7 +313,7 @@
 		"css":"3",
 		"prop":":only-child",
 		"desc":["It matches the child element, if it is the only child of the parent."],
-		"examples":[{"example":"p:only-child{ color: grey;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>\n<div>\n\t\t<p>Only Child</p>\n</div>"}],
+		"examples":[{"example":"p:only-child{ color:grey;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>\n<div>\n\t\t<p>Only Child</p>\n</div>"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"40":{
@@ -321,7 +321,7 @@
 		"css":"3",
 		"prop":":nth-child(n)",
 		"desc":["It matches every element that is the child of its parent based on the condition or keyword or number"],
-		"examples":[{"example":"p:nth-child(even){ color: #ff66ff;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"},{"example":"li:nth-child(3){ color: #ff66ff;}"},{"example":"li:nth-child(5n+1){ color: #ff66ff;}","desc":"Here n will start from 0"}],
+		"examples":[{"example":"p:nth-child(even){ color:#ff66ff;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"},{"example":"li:nth-child(3){ color:#ff66ff;}"},{"example":"li:nth-child(5n+1){ color:#ff66ff;}","desc":"Here n will start from 0"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"41":{
@@ -329,7 +329,7 @@
 		"css":"3",
 		"prop":":nth-last-child(n)",
 		"desc":["It matches every element that is the child of its parent based on the condition or keyword or number from the bottom"],
-		"examples":[{"example":"p:nth-last-child(1){ color: #ff66ff;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"}],
+		"examples":[{"example":"p:nth-last-child(1){ color:#ff66ff;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"42":{
@@ -337,7 +337,7 @@
 		"css":"3",
 		"prop":":first-of-type",
 		"desc":["It selects only the first child, of a specified type, of the parent."],
-		"examples":[{"example":"span:first-of-type{ color: #cc3300;}","html":"<div>\n\t\t<p>This is first p child</p>\n\t\t<span>This is first span child</span>\n\t\t<span>This is second span child</span>\n</div>"}],
+		"examples":[{"example":"span:first-of-type{ color:#cc3300;}","html":"<div>\n\t\t<p>This is first p child</p>\n\t\t<span>This is first span child</span>\n\t\t<span>This is second span child</span>\n</div>"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"43":{
@@ -345,7 +345,7 @@
 		"css":"3",
 		"prop":":last-of-type",
 		"desc":["It selects only the last child, of a specified type, of the parent."],
-		"examples":[{"example":"span:last-of-type{ color: #cc3300;}","html":"<div>\n\t\t<p>This is first p child</p>\n\t\t<span>This is first span child</span>\n\t\t<span>This is second span child</span>\n\t\t<p>This is second p child</p>\n</div>"}],
+		"examples":[{"example":"span:last-of-type{ color:#cc3300;}","html":"<div>\n\t\t<p>This is first p child</p>\n\t\t<span>This is first span child</span>\n\t\t<span>This is second span child</span>\n\t\t<p>This is second p child</p>\n</div>"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"44":{
@@ -353,7 +353,7 @@
 		"css":"3",
 		"prop":":only-of-type",
 		"desc":["It matches the child element, if it is the only child, of a specified type, of the parent."],
-		"examples":[{"example":"span:last-of-type{ color: #cc3300;}","html":"<div>\n\t\t<p>This is first p child</p>\n\t\t<span>This is only span child</span>\n\t\t<p>This is second p child</p>\n</div>"}],
+		"examples":[{"example":"span:last-of-type{ color:#cc3300;}","html":"<div>\n\t\t<p>This is first p child</p>\n\t\t<span>This is only span child</span>\n\t\t<p>This is second p child</p>\n</div>"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"45":{
@@ -361,7 +361,7 @@
 		"css":"3",
 		"prop":":nth-of-type(n)",
 		"desc":["It matches every element that is the child, of a specified type of its parent based on the condition or keyword or number"],
-		"examples":[{"example":"p:nth-of-type(even){ color: #ff66ff;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"},{"example":"li:nth-of-type(3){ color: #ff66ff;}"},{"example":"li:nth-of-type(5n+1){ color: #ff66ff;}","desc":"Here n will start from 0"}],
+		"examples":[{"example":"p:nth-of-type(even){ color:#ff66ff;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"},{"example":"li:nth-of-type(3){ color:#ff66ff;}"},{"example":"li:nth-of-type(5n+1){ color:#ff66ff;}","desc":"Here n will start from 0"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"46":{
@@ -369,14 +369,14 @@
 		"css":"3",
 		"prop":":nth-last-of-type(n)",
 		"desc":["It matches every element that is the child, of a specified type of its parent based on the condition or keyword or number from the bottom"],
-		"examples":[{"example":"p:nth-last-of-type(1){ color: #ff66ff;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"}],
+		"examples":[{"example":"p:nth-last-of-type(1){ color:#ff66ff;}","html":"<div>\n\t\t<p>This is First child</p>\n\t\t<p>This is Second child</p>\n\t\t<p>This is Third child</p>\n</div>"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"47":{
 		"id":47,
 		"css":"1",
 		"prop":":first-letter",
-		"examples":[{"example":"p:first-letter{ color: red;font-weight: bold;}","html":"<p>This is Awesome selector</p>"}],
+		"examples":[{"example":"p:first-letter{ color:red; font-weight:bold;}","html":"<p>This is Awesome selector</p>"}],
 		"desc":["The :first-letter selector is used to style the first letter of the element","It only works on block level elements."],
 		"browser":{"c":"1.0","i":"9.0","f":"1.0","s":"1.0","o":"7.0"}
 	},
@@ -384,7 +384,7 @@
 		"id":48,
 		"css":"1",
 		"prop":":first-line",
-		"examples":[{"example":"p:first-line{ color: blue;font-style: italics;}","html":"<p>We’re passionate about protecting our planet and conserving natural resources for future generations, including pursuing innovative ways to reduce our environmental impacts across our value chain.</p>"}],
+		"examples":[{"example":"p:first-line{ color:blue; font-style:italics;}","html":"<p>We’re passionate about protecting our planet and conserving natural resources for future generations, including pursuing innovative ways to reduce our environmental impacts across our value chain.</p>"}],
 		"desc":["The :first-line selector is used to style the first line of the element","It only works on block level elements."],
 		"browser":{"c":"1.0","i":"9.0","f":"1.0","s":"1.0","o":"7.0"}
 	},
@@ -392,7 +392,7 @@
 		"id":49,
 		"css":"3",
 		"prop":":empty",
-		"examples":[{"example":"p:empty{ background: grey;}","html":"<p></p>\n<p>This is not empty</p>\n<p>\n\t\t<span>This is not empty</span>\n</p>"}],
+		"examples":[{"example":"p:empty{ background:grey;}","html":"<p></p>\n<p>This is not empty</p>\n<p>\n\t\t<span>This is not empty</span>\n</p>"}],
 		"desc":["It selects elements with nothing or only comments in it."],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
@@ -400,7 +400,7 @@
 		"id":50,
 		"css":"3",
 		"prop":":root",
-		"examples":[{"example":":root{ background-color: #99ccff;}"}],
+		"examples":[{"example":":root{ background-color:#99ccff;}"}],
 		"desc":["It refers to <html> element in the webpage.","It selects the document's root element."],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
@@ -410,7 +410,7 @@
 		"class":"select",
 		"desc":["It used to style the user selection area of the text node"],
 		"prop":"::selection",
-		"examples":[{"example":"p::selection{ color:white; background: black;}","html":"<p>Try Selecting me or double click me or copy me or hold on me.</p>"}],
+		"examples":[{"example":"p::selection{ color:white; background:black;}","html":"<p>Try Selecting me or double click me or copy me or hold on me.</p>"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"52":{
@@ -418,7 +418,7 @@
 		"css":"3",
 		"prop":":target",
 		"desc":["The :target selector can be used to style the current active target element."],
-		"examples":[{"example":":target{ border: 2px solid orange;}"}],
+		"examples":[{"example":":target{ border:2px solid orange;}"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"53":{
@@ -426,7 +426,7 @@
 		"css":"3",
 		"prop":":not(selector)",
 		"desc":["The negation selector is used to match every element that is not specified by selector"],
-		"examples":[{"example":"li:not(.special){ font-weight: bold; color: red;}","html":"<ul>\n\t\t<li>List Item 1</li>\n\t\t<li>List Item 2</li>\n\t\t<li class='special'>List Item 3</li>\n\t\t<li>List Item 4</li>\n</ul>"}],
+		"examples":[{"example":"li:not(.special){ font-weight:bold; color:red;}","html":"<ul>\n\t\t<li>List Item 1</li>\n\t\t<li>List Item 2</li>\n\t\t<li class='special'>List Item 3</li>\n\t\t<li>List Item 4</li>\n</ul>"}],
 		"browser":{"c":"4.0","i":"9.0","f":"3.5","s":"3.2","o":"9.6"}
 	},
 	"54":{

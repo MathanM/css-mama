@@ -158,25 +158,27 @@
         </ng-container>
       </ng-container>
     </div>
-    <ion-item *ngIf="cssData[selectedId].type === 'select'">
-      <ion-label>{{cssData[selectedId].prop}}</ion-label>
-      <ion-select *ngIf="!selectedChild" [(ngModel)]="style[cssData[selectedId].prop]" okText="Ok" cancelText="Cancel" (ngModelChange)="onStyleChange()">
-        <ion-select-option *ngFor="let i of cssData[selectedId].pg" [value]="i">{{i}}</ion-select-option>
-      </ion-select>
-      <ion-select *ngIf="selectedChild" [(ngModel)]="style[selectedChild.className][cssData[selectedId].prop]" okText="Ok" cancelText="Cancel" (ngModelChange)="onStyleChange()">
-        <ion-select-option *ngFor="let i of cssData[selectedId].pg" [value]="i">{{i}}</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-item *ngIf="cssData[selectedId].type === 'slider'">
-      <ion-range *ngIf="!selectedChild" color="violet" [min]="cssData[selectedId].min?cssData[selectedId].min:0" [max]="cssData[selectedId].max?cssData[selectedId].max:50" [(ngModel)]="style[cssData[selectedId].prop]" (ngModelChange)="onSliderChange()">
-        <ion-label slot="start">{{cssData[selectedId].min?cssData[selectedId].min:0}} {{selectedUnit}}</ion-label>
-        <ion-label slot="end">{{cssData[selectedId].max?cssData[selectedId].max:50}} {{selectedUnit}}</ion-label>
-      </ion-range>
-      <ion-range *ngIf="selectedChild" color="violet" [min]="cssData[selectedId].min?cssData[selectedId].min:0" [max]="cssData[selectedId].max?cssData[selectedId].max:50" [(ngModel)]="style[selectedChild.className][cssData[selectedId].prop]" (ngModelChange)="onSliderChange()">
-        <ion-label slot="start">{{cssData[selectedId].min?cssData[selectedId].min:0}} {{selectedUnit}}</ion-label>
-        <ion-label slot="end">{{cssData[selectedId].max?cssData[selectedId].max:50}} {{selectedUnit}}</ion-label>
-      </ion-range>
-    </ion-item>
+    <ng-container *ngIf="cssData">
+      <ion-item *ngIf="cssData[selectedId].type === 'select'">
+        <ion-label>{{cssData[selectedId].prop}}</ion-label>
+        <ion-select *ngIf="!selectedChild" [(ngModel)]="style[cssData[selectedId].prop]" okText="Ok" cancelText="Cancel" (ngModelChange)="onStyleChange()">
+          <ion-select-option *ngFor="let i of cssData[selectedId].pg" [value]="i">{{i}}</ion-select-option>
+        </ion-select>
+        <ion-select *ngIf="selectedChild" [(ngModel)]="style[selectedChild.className][cssData[selectedId].prop]" okText="Ok" cancelText="Cancel" (ngModelChange)="onStyleChange()">
+          <ion-select-option *ngFor="let i of cssData[selectedId].pg" [value]="i">{{i}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngIf="cssData[selectedId].type === 'slider'">
+        <ion-range *ngIf="!selectedChild" color="violet" [min]="cssData[selectedId].min?cssData[selectedId].min:0" [max]="cssData[selectedId].max?cssData[selectedId].max:50" [(ngModel)]="style[cssData[selectedId].prop]" (ngModelChange)="onSliderChange()">
+          <ion-label slot="start">{{cssData[selectedId].min?cssData[selectedId].min:0}} {{selectedUnit}}</ion-label>
+          <ion-label slot="end">{{cssData[selectedId].max?cssData[selectedId].max:50}} {{selectedUnit}}</ion-label>
+        </ion-range>
+        <ion-range *ngIf="selectedChild" color="violet" [min]="cssData[selectedId].min?cssData[selectedId].min:0" [max]="cssData[selectedId].max?cssData[selectedId].max:50" [(ngModel)]="style[selectedChild.className][cssData[selectedId].prop]" (ngModelChange)="onSliderChange()">
+          <ion-label slot="start">{{cssData[selectedId].min?cssData[selectedId].min:0}} {{selectedUnit}}</ion-label>
+          <ion-label slot="end">{{cssData[selectedId].max?cssData[selectedId].max:50}} {{selectedUnit}}</ion-label>
+        </ion-range>
+      </ion-item>
+    </ng-container>
     <div class="code-ide" *ngIf="exampleData.pg || exampleData.required || exampleData.comment">
       <span class="">.{{parentClass}} <span class="splChara">{{'{\n\t'}}</span></span>
       <ng-container *ngIf="exampleData.pg">
